@@ -2,7 +2,7 @@
 
 @functions{
   public string VCardLink(dynamic employee) {
-    return "/DesktopModules/ToSIC_SexyContent/Extensions/ToSic_vCard/vCard.ashx"
+    return App.Path + "/vCard.ashx"
       + "?FirstName=" + employee.FirstName
       + "&LastName=" + employee.LastName
       + "&Organization=" + App.Settings.CompanyName
@@ -14,7 +14,7 @@
       + "&Phone=" + employee.Phone
       + "&PhoneCompany=" + App.Settings.CompanyPhone
       + "&Email=" + employee.EMail
-      + "&Url=" + employee.CompanyUrl
+      + "&Url=" + App.Settings.CompanyUrl
       + "&Photo=" + employee.Image;
   }
 }

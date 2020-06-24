@@ -1,8 +1,7 @@
 {
-  "TODO:": "write description",
   "name": "employees-directory",
   "version": "03.00.00",
-  "description": "A simple, easy to customize Gallery-App for DNN (DotNetNuke) based on the awesome fancybox 3",
+  "description": "A employees directory app for 2sxc",
   "main": "(none)",
   "scripts": {
     "build-prod": "webpack"
