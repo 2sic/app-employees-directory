@@ -1,0 +1,20 @@
+@inherits ToSic.Custom.Razor12
+@{
+  // get key from settings and remove empty lines
+  // will also add warning! in front, if the settings say to include a warning
+  var warning = (App.Settings.GoogleMapsShowWarning ? "warning!" : "");
+  var key = warning + App.Settings.GoogleMapsKey.Replace("\n", "");
+
+  var lat = (AsDynamic(Content.GPS).Latitude ?? 0).ToString().Replace(",",".");
+  var lng = (AsDynamic(Content.GPS).Longitude ?? 0).ToString().Replace(",",".");
+}
+<script type="text/javascript">
+  var googleMapsApiKey = "@key";
+
+  $(function(){
+    $("#GoogleMap-@Content.EntityId").toGoogleMap({
+      lat: @lat,
+      lng: @lng
+    });
+  });
+</script>

@@ -1,6 +1,8 @@
-@inherits ToSic.Sxc.Dnn.RazorComponent
+@inherits ToSic.Custom.Razor12
 @using ToSic.Razor.Blade;
-
+@{
+  var vCard = CreateInstance("VCard.cs");
+}
 <div class="app-empdir-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
@@ -37,7 +39,7 @@
             @if(Text.Has(Content.EMail)) {
               <a href="mailto:@Content.EMail">@Content.EMail</a><br/>
             }
-            <a href="@Tags.SafeUrl(Code.VCardLink(Content))">vCard</a>
+            <a href="@Tags.SafeUrl(vCard.Link(Content))">vCard</a>
           </p>
         </div>
         <div class="col-12">@Html.Raw(Content.AdditionalNotes)</div>
@@ -52,5 +54,5 @@
   </div>
 </div>
 
-@Code.AddGoogleMaps()
+@RenderPage("_GoogleMaps.cshtml")
 @RenderPage("shared/_Assets.cshtml", new { Scripts = true })

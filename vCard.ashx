@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
+// TODO: V12 - THIS MUST GO INTO A WEB-API AND THE LINK MUST THEN BE CHANGED
+
 public class VCardHandler : IHttpHandler
 {
 	private const string PhotoPathBase = "~";
