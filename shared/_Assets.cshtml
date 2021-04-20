@@ -20,7 +20,7 @@
 }
 
 @* Include libaries / scripts *@
-@if(PageData["scripts"] == true) {
+@if(DynamicModel.scripts == true) {
   // tell DNN to load jquery as it's needed by fancybox
   JavaScript.RequestRegistration(CommonJs.jQuery);
 
