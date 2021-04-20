@@ -54,5 +54,5 @@
   </div>
 </div>
 
-@RenderPage("_GoogleMaps.cshtml")
-@RenderPage("shared/_Assets.cshtml", new { Scripts = true })
+@Html.Partial("_GoogleMaps.cshtml")
+@Html.Partial("shared/_Assets.cshtml", new { Scripts = true })
