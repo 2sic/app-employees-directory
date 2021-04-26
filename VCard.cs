@@ -1,4 +1,4 @@
-public class VCard: ToSic.Hybrid.Code12
+public class VCard: Custom.Hybrid.Code12
 {
   public string Link(dynamic employee) {
     return App.Path + "/vCard.ashx"
