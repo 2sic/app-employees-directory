@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.03.00" ExportDate="2020-06-29T13:46:10.9955634+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-27T16:18:20.1443723+02:00">
   <Header>
-    <App Guid="ce646ddd-8789-4fef-8f39-b7e1d1908fe3" />
-    <Language Default="en-US" />
+    <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
+    <Language Default="en-us" />
     <Dimensions>
       <Dimension DimensionID="63" Name="English (United States)" SystemKey="" ExternalKey="en-US" Active="true" />
       <Dimension DimensionID="64" Name="Deutsch (Deutschland)" SystemKey="" ExternalKey="de-DE" Active="true" />
@@ -1077,13 +1077,13 @@
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="DisplayName" Value="Employees Directory" Type="String">
+      <Value Key="DisplayName" Value="People Directory" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="DisplayName" Value="Mitarbeiterverzeichnis" Type="String">
         <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
-      <Value Key="Folder" Value="EmployeesDirectory3" Type="String">
+      <Value Key="Folder" Value="PeopleDirectory4" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Hidden" Value="False" Type="Boolean">
@@ -1095,13 +1095,16 @@
       <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
+      <Value Key="RequiredOqtaneVersion" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
       <Value Key="RequiredVersion" Value="11.00.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.00.01" Type="String">
+      <Value Key="Version" Value="04.00.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1306,6 +1309,11 @@
       <Value Key="UseForList" Value="True" Type="Boolean" />
       <Value Key="ViewNameInUrl" Value="" Type="String" />
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="8fa204a0-6a1b-4a73-bb15-785546728e2f" Json="True">
+      <Value Key="Content" Value="33cfd4e6-563a-432c-8337-25b1fe8c8f55" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="70e4db4b-d2f1-47c5-96b2-19a3673bdb3c" Type="Entity" />
+    </Entity>
     <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="ContentType" AttributeSetName="ContentType" EntityGUID="50f9779b-3f00-4fbb-a72d-8d0ffa41a932" Json="True" KeyString="a7abc3ba-59df-40c5-a7dd-13be92507701">
       <Value Key="Description" Value="Content-Type for Employees" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
@@ -1331,6 +1339,11 @@
       <Value Key="Notes" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="b567ded2-8f27-4cb6-b3aa-f52bee6ec9d9" Json="True">
+      <Value Key="Content" Value="null,null,33cfd4e6-563a-432c-8337-25b1fe8c8f55" Type="Entity" />
+      <Value Key="Presentation" Value="null,null,null" Type="Entity" />
+      <Value Key="Template" Value="b5659670-8cb3-4dac-97c9-6a03af4ec772" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="3937fa17-ef2d-40a7-b089-64164eb10bab" AttributeSetName="2sxcPolymorphismConfiguration" EntityGUID="f4491b9b-fd86-4c15-9603-1f840f7174ab" Json="True">
       <Value Key="Mode" Value="Koi?cssFramework" Type="String">
@@ -1361,16 +1374,10 @@
   <PortalFiles>
     <File Id="4554" RelativePath="adam\EmployeesDirectory3\o6drzpClUkm8oPfWyqwdaA\Image\placeholder_q.jpg" />
     <File Id="4555" RelativePath="adam\EmployeesDirectory3\5tTPMzpWLEODNyWx_oyPVQ\Image\Daniel Mettler Profile MVP.png" />
-    <File Id="4542" RelativePath="adam\EmployeesDirectory3\Hbtv3PcTrEyIOrHsojMKUw\Image\Portrait 2az (2).jpg" />
-    <File Id="4553" RelativePath="adam\EmployeesDirectory3\o6drzpClUkm8oPfWyqwdaA\Image\placeholder.jpg" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="10176" RelativePath="adam/EmployeesDirectory3/o6drzpClUkm8oPfWyqwdaA/Image/" />
     <Folder Id="10178" RelativePath="adam/EmployeesDirectory3/5tTPMzpWLEODNyWx_oyPVQ/Image/" />
-    <Folder Id="10080" RelativePath="adam/EmployeesDirectory3/Hbtv3PcTrEyIOrHsojMKUw/Image/" />
-    <Folder Id="10078" RelativePath="adam/EmployeesDirectory3/" />
-    <Folder Id="10177" RelativePath="adam/EmployeesDirectory3/5tTPMzpWLEODNyWx_oyPVQ/" />
-    <Folder Id="10079" RelativePath="adam/EmployeesDirectory3/Hbtv3PcTrEyIOrHsojMKUw/" />
-    <Folder Id="10175" RelativePath="adam/EmployeesDirectory3/o6drzpClUkm8oPfWyqwdaA/" />
+    <Folder Id="13434" RelativePath="adam/PeopleDirectory4/" />
   </PortalFolders>
 </SexyContent>
