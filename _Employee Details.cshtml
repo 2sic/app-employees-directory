@@ -1,4 +1,4 @@
-@inherits ToSic.Sxc.Dnn.RazorComponent
+@inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
 
 <div class="app-empdir-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
@@ -53,4 +53,4 @@
 </div>
 
 @Code.AddGoogleMaps()
-@RenderPage("shared/_Assets.cshtml", new { Scripts = true })
+@Html.Partial("shared/_Assets.cshtml", new { Scripts = true })
