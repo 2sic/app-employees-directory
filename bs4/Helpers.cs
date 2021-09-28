@@ -1,10 +1,11 @@
-@* inherits ToSic.Sxc.Dnn.RazorComponentCode *@
-@inherits Custom.Hybrid.Razor12
+using ToSic.Razor.Blade;
+using System.Linq;
+using System;
 
-@functions{
-  public string VCardLink(dynamic employee) {
-    return App.Path + "/vCard.ashx"
-      + "?FirstName=" + employee.FirstName
+public class Helpers: Custom.Hybrid.Code12
+{
+  public dynamic VCardParams(dynamic employee) {
+    return "?FirstName=" + employee.FirstName
       + "&LastName=" + employee.LastName
       + "&Organization=" + App.Settings.CompanyName
       + "&JobTitle=" + employee.Function
@@ -18,4 +19,7 @@
       + "&Url=" + App.Settings.CompanyUrl
       + "&Photo=" + employee.Image;
   }
+
 }
+
+
