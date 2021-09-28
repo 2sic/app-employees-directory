@@ -41,9 +41,7 @@
             @if(Text.Has(Content.EMail)) {
               <a href="mailto:@Content.EMail">@Content.EMail</a><br/>
             }
-            <a href='@Link.To(api: "api/PeopleDirectory/VCard", parameters: vcardLink.VCardParams(Content))'>vCard old -dnn only TODO: REMOVE</a>
-
-            <a href='@Link.To(api: "api/VCard/Get", parameters: vcardLink.VCardParams(Content))' target="_blank">vCard</a>
+            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Content.UrlKey)' target="_blank">vCard</a>
           </p>
         </div>
         <div class="col-12">@Html.Raw(Content.AdditionalNotes)</div>
