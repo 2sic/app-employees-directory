@@ -1,10 +1,6 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
-@{
-  // Get some helper commands for later on
-  // FYI: @2mh - often it's better to give the helper a clear name
-  var vcardLink = CreateInstance("VCardLink.cs");
-}
+
 <div class="app-peopledirectory4-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
