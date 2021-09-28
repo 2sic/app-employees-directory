@@ -2,8 +2,9 @@ using ToSic.Razor.Blade;
 using System.Linq;
 using System;
 
-public class Helpers: Custom.Hybrid.Code12
+public class VCardLink: Custom.Hybrid.Code12
 {
+  // TODO: @2mh - this is a clear string that comes back, shouldn't be dynamic
   public dynamic VCardParams(dynamic employee) {
     return "?FirstName=" + employee.FirstName
       + "&LastName=" + employee.LastName

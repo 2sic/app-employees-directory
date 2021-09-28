@@ -2,7 +2,8 @@
 @using ToSic.Razor.Blade;
 @{
   // Get some helper commands for later on
-  var helpers = CreateInstance("Helpers.cs");
+  // FYI: @2mh - often it's better to give the helper a clear name
+  var vcardLink = CreateInstance("VCardLink.cs");
 }
 <div class="app-peopledirectory4-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
   <div class="row">
@@ -40,7 +41,9 @@
             @if(Text.Has(Content.EMail)) {
               <a href="mailto:@Content.EMail">@Content.EMail</a><br/>
             }
-            <a href='@Link.To(api: "api/PeopleDirectory/VCard", parameters: helpers.VCardParams(Content))'>vCard</a>
+            <a href='@Link.To(api: "api/PeopleDirectory/VCard", parameters: vcardLink.VCardParams(Content))'>vCard old -dnn only TODO: REMOVE</a>
+
+            <a href='@Link.To(api: "api/VCard/Get", parameters: vcardLink.VCardParams(Content))' target="_blank">vCard</a>
           </p>
         </div>
         <div class="col-12">@Html.Raw(Content.AdditionalNotes)</div>
