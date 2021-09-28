@@ -1,10 +1,6 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
 
-@{
-  var employees = AsList(App.Data["Person"]).OrderBy(e => e.FullName);
-}
-
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
     @foreach(var employee in AsList(Data)) {
