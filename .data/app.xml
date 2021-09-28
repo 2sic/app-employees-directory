@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-27T16:50:05.2903027+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-28T23:04:51.8447318+02:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -309,7 +309,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Employee" Description="Content-Type to display Employee." Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Person" Description="Content-Type to display Employee." Scope="2SexyContent" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="FullName" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="98357e0c-d843-446c-810f-1309ccf4b7f1" Json="True" KeyNumber="1467">
@@ -1089,13 +1089,13 @@
       <Value Key="Hidden" Value="False" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="OriginalId" Value="ce646ddd-8789-4fef-8f39-b7e1d1908fe3" Type="String">
+      <Value Key="OriginalId" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="02.02.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="RequiredVersion" Value="11.00.00" Type="String">
@@ -1109,9 +1109,15 @@
       </Value>
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="32b2cf2a-febe-441b-ae7e-f3fed4405b1c" KeyNumber="76">
-      <Value Key="CompanyName" Value="2sic Internet Solutions" Type="String" />
-      <Value Key="CompanyPhone" Value="+41 81 750 67 70" Type="String" />
-      <Value Key="CompanyUrl" Value="http://www.2sic.com/" Type="Hyperlink" />
+      <Value Key="CompanyName" Value="2sic Internet Solutions" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="CompanyPhone" Value="+41 81 750 67 70" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="CompanyUrl" Value="http://www.2sic.com/" Type="Hyperlink">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
       <Value Key="GoogleMapsKey" Value="AIzaSyAKEFBVw7SddUQ&#xA;R0YnAuTam5wpXvDomzts" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1120,7 +1126,7 @@
       </Value>
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="0a4e5126-3ea4-4662-9a9b-539578ebaf14" KeyNumber="76" />
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Employee" EntityGUID="ce6ba7a3-a590-4952-bca0-f7d6caac1d68">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="ce6ba7a3-a590-4952-bca0-f7d6caac1d68">
       <Value Key="AdditionalNotes" Value="&lt;p&gt;Need help getting started? Take a look at &lt;a href=&quot;https://azing.org/2sxc/r/2Qsd-qum&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this checklist&lt;/a&gt;.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1173,7 +1179,7 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Employee" EntityGUID="33cfd4e6-563a-432c-8337-25b1fe8c8f55">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="33cfd4e6-563a-432c-8337-25b1fe8c8f55">
       <Value Key="AdditionalNotes" Value="&lt;p&gt;Need help getting started? Take a look at &lt;a href=&quot;https://azing.org/2sxc/r/2Qsd-qum&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this checklist&lt;/a&gt;.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1232,82 +1238,192 @@
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7" Json="True">
       <Value Key="AllowEdit" Value="True" Type="Boolean" />
       <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="Employee Details" Type="String" />
-      <Value Key="Params" Value="UrlKey=[QueryString:Employee]" Type="String" />
-      <Value Key="StreamsOut" Value="ListContent,Default" Type="String" />
-      <Value Key="StreamWiring" Value="a52e94a0-f43a-4e0e-acd3-9abf8194958e:Default&gt;fb0b6971-1481-47c8-9b27-e872ede93f2d:Default&#xD;&#xA;a52e94a0-f43a-4e0e-acd3-9abf8194958e:Drafts&gt;fb0b6971-1481-47c8-9b27-e872ede93f2d:Drafts&#xD;&#xA;a52e94a0-f43a-4e0e-acd3-9abf8194958e:Published&gt;fb0b6971-1481-47c8-9b27-e872ede93f2d:Published&#xD;&#xA;fb0b6971-1481-47c8-9b27-e872ede93f2d:Default&gt;79a9a7a3-0673-43cf-a734-0595451e1fe8:Default&#xD;&#xA;79a9a7a3-0673-43cf-a734-0595451e1fe8:Default&gt;3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default&#xD;&#xA;3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default&gt;Out:Default" Type="String" />
+      <Value Key="Name" Value="PersonUrlKey" Type="String" />
+      <Value Key="Params" Value="UrlKey=[QueryString:Employee||[QueryString:id]]" Type="String" />
+      <Value Key="StreamsOut" Value="Default,Header" Type="String" />
+      <Value Key="StreamWiring" Value="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default&gt;Out:Default&#xD;&#xA;97edaf77-c49f-4e98-868d-3eb3a5096f76:Person&gt;3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default" Type="String" />
       <Value Key="TestParameters" Value="[Params:UrlKey]=daniel-mettler" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="a52e94a0-f43a-4e0e-acd3-9abf8194958e" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="ICache" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.IAppRoot, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 800,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="fb0b6971-1481-47c8-9b27-e872ede93f2d" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="PublishingFilter" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.PublishingFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 600,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="68005437-fcea-4ef7-aa7d-69fc509d23b6" Json="True" KeyGuid="95ea46e9-233b-4c06-8674-69534513b9b0">
       <Value Key="EntityIds" Value="[Params:UrlKey||0]" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="79a9a7a3-0673-43cf-a734-0595451e1fe8" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="Filter: Employee" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 420,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="3ae16cea-1858-4996-beef-e9a632965c22" Json="True" KeyGuid="79a9a7a3-0673-43cf-a734-0595451e1fe8">
-      <Value Key="TypeName" Value="Employee" Type="String" />
+      <Value Key="TypeName" Value="a7abc3ba-59df-40c5-a7dd-13be92507701" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="b5659670-8cb3-4dac-97c9-6a03af4ec772" Json="True">
-      <Value Key="ContentTypeStaticName" Value="" Type="String" />
-      <Value Key="IsHidden" Value="False" Type="Boolean" />
-      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
-      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
-      <Value Key="Location" Value="Portal File System" Type="String" />
-      <Value Key="Name" Value="All Employees" Type="String" />
-      <Value Key="Path" Value="_All Employees.cshtml" Type="String" />
-      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
-      <Value Key="PublishData" Value="False" Type="Boolean" />
-      <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String" />
-      <Value Key="Type" Value="C# Razor" Type="String" />
-      <Value Key="UseForList" Value="False" Type="Boolean" />
-      <Value Key="ViewNameInUrl" Value="" Type="String" />
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Icon" Value="" Type="Hyperlink">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Identifier" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Site" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="All Employees" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs4/_PeopleDirectory.AllEmployees.cshtml" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Pipeline" Value="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Type="Entity">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingStreams" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewController" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="59f77e2d-730d-4ee3-b395-f738b9516981" Json="True">
-      <Value Key="ContentTypeStaticName" Value="" Type="String" />
-      <Value Key="IsHidden" Value="True" Type="Boolean" />
-      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
-      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
-      <Value Key="Location" Value="Portal File System" Type="String" />
-      <Value Key="Name" Value="Employee Details" Type="String" />
-      <Value Key="Path" Value="_Employee Details.cshtml" Type="String" />
+      <Value Key="ContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Icon" Value="" Type="Hyperlink">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Identifier" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="True" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Site" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Employee Details" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs4/_PeopleDirectory.PartDetails.cshtml" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
       <Value Key="Pipeline" Value="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7" Type="Entity" />
-      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
-      <Value Key="PublishData" Value="False" Type="Boolean" />
-      <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String" />
-      <Value Key="Type" Value="C# Razor" Type="String" />
-      <Value Key="UseForList" Value="False" Type="Boolean" />
-      <Value Key="ViewNameInUrl" Value="Employee/.*" Type="String" />
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingDisabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingStreams" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewController" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="Employee/.*" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="70e4db4b-d2f1-47c5-96b2-19a3673bdb3c" Json="True">
       <Value Key="ContentDemoEntity" Value="ce6ba7a3-a590-4952-bca0-f7d6caac1d68" Type="Entity" />
-      <Value Key="ContentTypeStaticName" Value="a7abc3ba-59df-40c5-a7dd-13be92507701" Type="String" />
-      <Value Key="IsHidden" Value="False" Type="Boolean" />
-      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
-      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
-      <Value Key="Location" Value="Portal File System" Type="String" />
-      <Value Key="Name" Value="Selected Employees" Type="String" />
-      <Value Key="Path" Value="_Selected Employees.cshtml" Type="String" />
-      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
-      <Value Key="PublishData" Value="False" Type="Boolean" />
-      <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String" />
-      <Value Key="Type" Value="C# Razor" Type="String" />
-      <Value Key="UseForList" Value="True" Type="Boolean" />
-      <Value Key="ViewNameInUrl" Value="" Type="String" />
+      <Value Key="ContentTypeStaticName" Value="a7abc3ba-59df-40c5-a7dd-13be92507701" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Icon" Value="" Type="Hyperlink">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Identifier" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="IsHidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Location" Value="Site" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="Selected Employees" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs4/_PeopleDirectory.SelectedEmployees.cshtml" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="PublishData" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingStreams" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Type" Value="C# Razor" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="UseForList" Value="True" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewController" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewNameInUrl" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="8fa204a0-6a1b-4a73-bb15-785546728e2f" Json="True">
       <Value Key="Content" Value="33cfd4e6-563a-432c-8337-25b1fe8c8f55" Type="Entity" />
@@ -1321,19 +1437,25 @@
       <Value Key="Description" Value="Mitarbeiterdaten" Type="String">
         <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
+      <Value Key="DynamicChildrenField" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
       <Value Key="EditInstructions" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Icon" Value="" Type="Hyperlink">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Label" Value="Employee" Type="String">
+      <Value Key="Label" Value="Person or Employee" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Label" Value="Mitarbeiter" Type="String">
         <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
       <Value Key="Link" Value="" Type="Hyperlink">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ListInstructions" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Notes" Value="" Type="String">
@@ -1367,6 +1489,49 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Value" Value="[Params:UrlKey]" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="97edaf77-c49f-4e98-868d-3eb3a5096f76" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 580,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="c8eee91e-c6ce-434f-b8e7-d3c169f84d30" Json="True" KeyGuid="b2e3606e-3d1d-492e-a82a-17989038b232">
+      <Value Key="EntityIds" Value="[Params:Id]" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Json="True">
+      <Value Key="AllowEdit" Value="True" Type="Boolean" />
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="All Persons" Type="String" />
+      <Value Key="Params" Value="" Type="String" />
+      <Value Key="StreamsOut" Value="Default,Header" Type="String" />
+      <Value Key="StreamWiring" Value="9ed29003-a493-4f2c-91bb-58e755573098:Person&gt;59f96bbc-1be2-4bb1-a370-40e6a1555f2c:Default&#xD;&#xA;59f96bbc-1be2-4bb1-a370-40e6a1555f2c:Default&gt;Out:Default" Type="String" />
+      <Value Key="TestParameters" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="9ed29003-a493-4f2c-91bb-58e755573098" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 400,&#xD;&#xA;  &quot;Left&quot;: 260&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="59f96bbc-1be2-4bb1-a370-40e6a1555f2c" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="Value Sort" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueSort, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 180,&#xD;&#xA;  &quot;Left&quot;: 380&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueSort" AttributeSetName="ToSic.Eav.DataSources.ValueSort" EntityGUID="cfc3a902-879e-4b80-a753-7271f05be3f3" Json="True" KeyGuid="59f96bbc-1be2-4bb1-a370-40e6a1555f2c">
+      <Value Key="Attributes" Value="FullName" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Directions" Value="asc" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Languages" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
