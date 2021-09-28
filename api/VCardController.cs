@@ -10,41 +10,43 @@ using System.Web.Http;
 #endif
 using System;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
+using ToSic.Razor.Blade;
 
 // TODO: V12 - THIS MUST GO INTO A WEB-API AND THE LINK MUST THEN BE CHANGED
 public class VCardController : Custom.Hybrid.Api12
 {
-    [HttpGet]
-	[AllowAnonymous]
-    public dynamic Get(/*string firstName, string lastName, string organization, string jobTitle, string address, string zip, string city, string country,
-        string phone, string phoneCompany, string mobile, string email, string url, string photo*/)
-    {
-#if NETCOREAPP // Oqtane
-        var queryString = Request.Query;
-#else // DNN
-        var queryString = HttpContext.Current.Request.QueryString;
-#endif
+  [HttpGet]
+  [AllowAnonymous]
+  public dynamic Get(string id /*string firstName, string lastName, string organization, string jobTitle, string address, string zip, string city, string country,
+      string phone, string phoneCompany, string mobile, string email, string url, string photo*/)
+  {
+    var personEntity = App.Query["PersonUrlKey"].List.FirstOrDefault();
+    if (personEntity == null) throw new Exception("Can't find person with id " + id);
+    var person = AsDynamic(personEntity);
 
-        var card = new VCard
-        {
-            FirstName = queryString["firstName"],
-            LastName = queryString["lastName"],
-            Organization = queryString["organization"],
-            JobTitle = queryString["jobTitle"],
-            StreetAddress = queryString["address"],
-            Zip = queryString["zip"],
-            City = queryString["city"],
-            CountryName = queryString["country"],
-            Phone = queryString["phone"],
-            PhoneCompany = queryString["phoneCompany"],
-            Mobile = queryString["mobile"],
-            Email = queryString["email"],
-            Url = queryString["url"]
-        };
-        if (!string.IsNullOrWhiteSpace(queryString["photo"]))
-            card.PhotoPath = Link.Image(url: GetAbsoluteUrl(queryString["photo"]), width: 92, height: 92, quality: 0, format: "jpg");
+    var card = new VCard
+    {
+        FirstName = person.FirstName,
+        LastName = person.LastName,
+        Organization = Settings.CompanyName,
+        JobTitle = person.Function,
+        StreetAddress = person.Street,
+        Zip = person.ZipCode,
+        City = person.City,
+        CountryName = person.Country,
+        Phone = person.Phone,
+        PhoneCompany = Settings.CompanyPhone,
+        // Mobile = person.,// queryString["mobile"],
+        Email = person.EMail,
+        Url = Settings.CompanyUrl,
+    };
+    
+    // fyi @STV - Text.Has is nicer (Razor-Blade)
+    if (Text.Has(person.Image)) // !string.IsNullOrWhiteSpace(queryString["photo"]))
+        card.PhotoPath = Link.Image(GetAbsoluteUrl(person.Image), width: 92, height: 92, quality: 0, format: "jpg");
 
         var mimeType = "text/vcard";
 #if NETCOREAPP // Oqtane
@@ -78,7 +80,7 @@ public class VCardController : Custom.Hybrid.Api12
         var cardBytes = inputEncoding.GetBytes(cardString);
         var outputBytes = Encoding.Convert(inputEncoding, outputEncoding, cardBytes);
 
-        return File(download: true, contents: outputBytes, contentType: mimeType, fileDownloadName: Path.GetFileName(fileName));
+        return File(download: false, contents: outputBytes, contentType: mimeType, fileDownloadName: Path.GetFileName(fileName));
     }
 
     internal class VCard

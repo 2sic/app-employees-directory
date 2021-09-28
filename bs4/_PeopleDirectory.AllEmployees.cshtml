@@ -2,12 +2,12 @@
 @using ToSic.Razor.Blade;
 
 @{
-  var employees = AsList(App.Data["Employee"]).OrderBy(e => e.FullName);
+  var employees = AsList(App.Data["Person"]).OrderBy(e => e.FullName);
 }
 
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
-    @foreach(var employee in employees) {
+    @foreach(var employee in AsList(Data)) {
       <div class="col mb-4" @Edit.TagToolbar(employee, toolbar: new [] {
         "%new&show=true?contentType=Employee&entityId=0",
         "%delete&show=true"
