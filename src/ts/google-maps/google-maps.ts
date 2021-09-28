@@ -23,7 +23,7 @@ export function activeGoogleMaps({apiKey, domId, lat, lng, warn, warning } : Map
     scaleControl: true,
     scrollwheel: false,
     mapTypeId: 'roadmap'
-  };
+  };  
 
   if(warn) showKeyWarnings(warning);
 
@@ -42,7 +42,7 @@ export function activeGoogleMaps({apiKey, domId, lat, lng, warn, warning } : Map
   });
 
   function showKeyWarnings(warning: string) {
-    var googleMapsElem = document.getElementsByClassName('app-peopledirectory4-google-map-container');
+    var googleMapsElem = document.getElementsByClassName('app-peopledirectory4-js-google-map-container');
 
     if(googleMapsElem.length != 0) {
       for(var i = 0; i < googleMapsElem.length; i++) {
