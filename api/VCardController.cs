@@ -85,26 +85,27 @@ public class VCardController : Custom.Hybrid.Api12
 
     public override string ToString()
     {
+      var charSet = "CHARSET=iso-8859-1:";
       var builder = new StringBuilder();
       builder.AppendLine("BEGIN:VCARD");
       builder.AppendLine("VERSION:2.1");
       // Name
-      builder.AppendLine("N;CHARSET=iso-8859-1:" + LastName + ";" + FirstName);
+      builder.AppendLine($"N;{charSet}{LastName};{FirstName}");
       // Full name
-      if (string.IsNullOrWhiteSpace(FirstName) && string.IsNullOrWhiteSpace(FirstName))
-          builder.AppendLine("FN;CHARSET=iso-8859-1:" + Organization);
+      if (Text.Has(FirstName) || Text.Has(FirstName))
+          builder.AppendLine($"FN;{charSet}{FirstName} {LastName}");
       else
-          builder.AppendLine("FN;CHARSET=iso-8859-1:" + FirstName + " " + LastName);
+          builder.AppendLine($"FN;{charSet}{Organization}");
       // Address
-      builder.Append("ADR;" + AddressType + ";PREF;CHARSET=iso-8859-1:;;");
+      builder.Append($"ADR;{AddressType};PREF;{charSet};;");
       builder.Append(StreetAddress + ";");
       builder.Append(City + ";;");
       builder.Append(Zip + ";");
       builder.AppendLine(CountryName);
       // Other data
-      builder.AppendLine("ORG;CHARSET=iso-8859-1:" + Organization);
-      builder.AppendLine("TITLE;CHARSET=iso-8859-1:" + JobTitle);
-      builder.AppendLine("TEL;" + AddressType + ";VOICE;CHARSET=iso-8859-1:" + Phone);
+      builder.AppendLine($"ORG;{charSet}{Organization}");
+      builder.AppendLine($"TITLE;{charSet}{JobTitle}");
+      builder.AppendLine($"TEL;{AddressType};VOICE;{charSet}" + Phone);
       if (!string.IsNullOrWhiteSpace(PhoneCompany))
         builder.AppendLine("X-MS-TEL;VOICE;COMPANY:" + PhoneCompany);
       builder.AppendLine("TEL;CELL;VOICE:" + Mobile);
@@ -114,6 +115,7 @@ public class VCardController : Custom.Hybrid.Api12
       // Add image
       if (PhotoPath != null)
       {
+        // TODO: Modify to first get the thumbnail, and only add these lines if successful
         builder.AppendLine("PHOTO;ENCODING=BASE64;TYPE=JPEG:");
         builder.AppendLine(CreateThumbnail(PhotoPath));
         builder.AppendLine(string.Empty);
@@ -127,10 +129,11 @@ public class VCardController : Custom.Hybrid.Api12
 
   internal static string CreateThumbnail(string absoluteUrl)
   {
-      // web request to image, so we can use image resizer for image preparation
-      var httpClient = new HttpClient();
-      var byteArray = httpClient.GetByteArrayAsync(absoluteUrl).Result;
-      return System.Convert.ToBase64String(byteArray);
+    // TODO: add try-catch to prevent problems
+    // web request to image, so we can use image resizer for image preparation
+    var httpClient = new HttpClient();
+    var byteArray = httpClient.GetByteArrayAsync(absoluteUrl).Result;
+    return System.Convert.ToBase64String(byteArray);
   }
 
   internal string GetAbsoluteUrl(string relativeUrl)
