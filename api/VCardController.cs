@@ -90,22 +90,22 @@ public class VCardController : Custom.Hybrid.Api12
       builder.AppendLine("BEGIN:VCARD");
       builder.AppendLine("VERSION:2.1");
       // Name
-      builder.AppendLine($"N;{charSet}{LastName};{FirstName}");
+      builder.AppendLine("N;" + charSet + LastName + ";" + FirstName);
       // Full name
       if (Text.Has(FirstName) || Text.Has(FirstName))
-          builder.AppendLine($"FN;{charSet}{FirstName} {LastName}");
+          builder.AppendLine("FN;" + charSet + FirstName + " " + LastName);
       else
-          builder.AppendLine($"FN;{charSet}{Organization}");
+          builder.AppendLine("FN;" + charSet + Organization);
       // Address
-      builder.Append($"ADR;{AddressType};PREF;{charSet};;");
+      builder.Append("ADR;" + AddressType + ";PREF;" + charSet + ";;");
       builder.Append(StreetAddress + ";");
       builder.Append(City + ";;");
       builder.Append(Zip + ";");
       builder.AppendLine(CountryName);
       // Other data
-      builder.AppendLine($"ORG;{charSet}{Organization}");
-      builder.AppendLine($"TITLE;{charSet}{JobTitle}");
-      builder.AppendLine($"TEL;{AddressType};VOICE;{charSet}" + Phone);
+      builder.AppendLine("ORG;" + charSet + Organization);
+      builder.AppendLine("TITLE;" + charSet + JobTitle);
+      builder.AppendLine("TEL;" + AddressType + ";VOICE;" + charSet + Phone);
       if (!string.IsNullOrWhiteSpace(PhoneCompany))
         builder.AppendLine("X-MS-TEL;VOICE;COMPANY:" + PhoneCompany);
       builder.AppendLine("TEL;CELL;VOICE:" + Mobile);
