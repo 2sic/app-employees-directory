@@ -47,12 +47,7 @@ public class VCardController : Custom.Hybrid.Api12
       card.PhotoPath = Link.Image(GetAbsoluteUrl(person.Image), width: 92, height: 92, quality: 0, format: "jpg");
 
     var mimeType = "text/vcard";
-#if NETCOREAPP // Oqtane
-    var response = Response;
-#else // DNN
-    var response = HttpContext.Current.Response;
-#endif
-    response.ContentType = mimeType;
+
     var fileName = card.FirstName + " " + card.LastName;
     if (string.IsNullOrWhiteSpace(fileName))
         fileName = card.Organization;
@@ -60,17 +55,6 @@ public class VCardController : Custom.Hybrid.Api12
         fileName = "contact";
     fileName += ".vcf";
 
-    //// source: http://stackoverflow.com/questions/93551/how-to-encode-the-filename-parameter-of-content-disposition-header-in-http
-    //string contentDisposition;
-    //if (Request.Browser.Browser == "IE")    // removed version check
-    //    contentDisposition = "attachment; filename=" + Uri.EscapeDataString(fileName);
-    //else if (context.Request.Browser.Browser == "Safari")
-    //    contentDisposition = "attachment; filename=" + fileName;
-    //else
-    //    contentDisposition = "attachment; filename*=UTF-8''" + Uri.EscapeDataString(fileName);
-    //response.AddHeader("Content-Disposition", contentDisposition);
-
-    ////response.AddHeader("Content-Disposition", "attachment; fileName=" + fileName + ".vcf");
 
     var cardString = card.ToString();
     var inputEncoding = Encoding.Default;
@@ -78,7 +62,7 @@ public class VCardController : Custom.Hybrid.Api12
     var cardBytes = inputEncoding.GetBytes(cardString);
     var outputBytes = Encoding.Convert(inputEncoding, outputEncoding, cardBytes);
 
-    return File(download: false, contents: outputBytes, contentType: mimeType, fileDownloadName: Path.GetFileName(fileName));
+    return File(download: true, contents: outputBytes, contentType: mimeType, fileDownloadName: Path.GetFileName(fileName));
   }
 
   internal class VCard
@@ -98,6 +82,7 @@ public class VCardController : Custom.Hybrid.Api12
     public string Email { get; set; }
     public string Url { get; set; }
     public string PhotoPath { get; set; }
+
     public override string ToString()
     {
       var builder = new StringBuilder();
