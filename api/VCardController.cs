@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 #else // DNN
 using System.Web;
 using System.Web.Http;
+using FromQueryAttribute = System.Web.Http.FromUriAttribute; // Sync-names to match .net core naming
 #endif
 using System;
 using System.IO;
@@ -19,7 +20,7 @@ public class VCardController : Custom.Hybrid.Api12
 {
   [HttpGet]
   [AllowAnonymous]
-  public dynamic Get(string id)
+  public dynamic Get([FromQuery] string id)
   {
     var personEntity = App.Query["PersonUrlKey"].List.FirstOrDefault();
     if (personEntity == null) throw new Exception("Can't find person with id " + id);
