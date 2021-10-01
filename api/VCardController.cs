@@ -43,8 +43,10 @@ public class VCardController : Custom.Hybrid.Api12
         Url = Settings.CompanyUrl,
     };
 
-    if (Text.Has(person.Image))
-      card.PhotoPath = Link.Image(GetAbsoluteUrl(person.Image), width: 92, height: 92, quality: 0, format: "jpg");
+    if (Text.Has(person.Image)) {
+      var photoPath = Link.Image(GetAbsoluteUrl(person.Image), width: 92, height: 92, quality: 0, format: "jpg");
+      card.PhotoBase64 = CreateThumbnail(photoPath);
+    }
 
     var mimeType = "text/vcard";
 
@@ -81,7 +83,7 @@ public class VCardController : Custom.Hybrid.Api12
     public string Mobile { get; set; }
     public string Email { get; set; }
     public string Url { get; set; }
-    public string PhotoPath { get; set; }
+    public string PhotoBase64 { get; set; } // Prepared photo as base64 encoding, jpg
 
     public override string ToString()
     {
@@ -113,11 +115,9 @@ public class VCardController : Custom.Hybrid.Api12
       builder.AppendLine("EMAIL;PREF;INTERNET:" + Email);
 
       // Add image
-      if (PhotoPath != null)
-      {
-        // TODO: Modify to first get the thumbnail, and only add these lines if successful
+      if(Text.Has(PhotoBase64)) {
         builder.AppendLine("PHOTO;ENCODING=BASE64;TYPE=JPEG:");
-        builder.AppendLine(CreateThumbnail(PhotoPath));
+        builder.AppendLine(PhotoBase64);
         builder.AppendLine(string.Empty);
       }
 
@@ -127,13 +127,21 @@ public class VCardController : Custom.Hybrid.Api12
     }
   }
 
-  internal static string CreateThumbnail(string absoluteUrl)
+  /// <summary>
+  /// web request to image, so we can use image resizer for image preparation
+  /// </summary>
+  internal string CreateThumbnail(string absoluteUrl)
   {
-    // TODO: add try-catch to prevent problems
-    // web request to image, so we can use image resizer for image preparation
-    var httpClient = new HttpClient();
-    var byteArray = httpClient.GetByteArrayAsync(absoluteUrl).Result;
-    return System.Convert.ToBase64String(byteArray);
+    // try-catch important as it can often cause problems
+    try {
+      var httpClient = new HttpClient();
+      var byteArray = httpClient.GetByteArrayAsync(absoluteUrl).Result;
+      return System.Convert.ToBase64String(byteArray);
+    } catch (Exception e) {
+      Log.Add("Error getting image file - path was:" + absoluteUrl);
+      Log.Exception(e);
+      return null;
+    }
   }
 
   internal string GetAbsoluteUrl(string relativeUrl)
