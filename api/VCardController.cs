@@ -44,7 +44,7 @@ public class VCardController : Custom.Hybrid.Api12
     };
 
     if (Text.Has(person.Image)) {
-      var photoPath = Link.Image(GetAbsoluteUrl(person.Image), width: 92, height: 92, quality: 0, format: "jpg");
+      var photoPath = Link.Image(person.Image, width: 250, height: 250, quality: 80, format: "jpg", part: "full");
       card.PhotoBase64 = CreateThumbnail(photoPath);
     }
 
@@ -67,6 +67,28 @@ public class VCardController : Custom.Hybrid.Api12
     return File(download: true, contents: outputBytes, contentType: mimeType, fileDownloadName: Path.GetFileName(fileName));
   }
 
+
+  /// <summary>
+  /// web request to image, so we can use image resizer for image preparation
+  /// </summary>
+  internal string CreateThumbnail(string absoluteUrl)
+  {
+    // try-catch important as it can often cause problems
+    try {
+      var byteArray = new HttpClient().GetByteArrayAsync(absoluteUrl).Result;
+      return System.Convert.ToBase64String(byteArray);
+    }
+    catch (Exception e)
+    {
+      Log.Add("Error getting image file - path was:" + absoluteUrl);
+      Log.Exception(e);
+      return null;
+    }
+  }
+
+  /// <summary>
+  /// Helper class to construct a vCard
+  /// </summary>
   internal class VCard
   {
     private const string AddressType = "WORK";
@@ -127,34 +149,4 @@ public class VCardController : Custom.Hybrid.Api12
     }
   }
 
-  /// <summary>
-  /// web request to image, so we can use image resizer for image preparation
-  /// </summary>
-  internal string CreateThumbnail(string absoluteUrl)
-  {
-    // try-catch important as it can often cause problems
-    try {
-      var httpClient = new HttpClient();
-      var byteArray = httpClient.GetByteArrayAsync(absoluteUrl).Result;
-      return System.Convert.ToBase64String(byteArray);
-    } catch (Exception e) {
-      Log.Add("Error getting image file - path was:" + absoluteUrl);
-      Log.Exception(e);
-      return null;
-    }
-  }
-
-  internal string GetAbsoluteUrl(string relativeUrl)
-  {
-#if NETCOREAPP // Oqtane
-    var request = Request;
-#else // DNN
-    var request = HttpContext.Current.Request.Url;
-#endif
-    return string.Concat(
-      request.Scheme,
-      "://",
-      request.Host,
-      relativeUrl);
-  }
 }
