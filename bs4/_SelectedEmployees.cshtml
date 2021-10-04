@@ -9,7 +9,7 @@
           <div class="row h-100 no-gutters align-items-center">
             <div class="col-3">
               @if(Text.Has(employee.Image)) {
-                <img class="img-fluid ml-2 ml-sm-0" src='@Link.Image(url: employee.Image, width: 200, height: 200, resizeMode: "crop", quality: 90)'/>
+                <img loading="lazy" class="img-fluid ml-2 ml-sm-0" src='@Link.Image(url: employee.Image, width: 200, height: 200, resizeMode: "crop", quality: 90)'/>
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }
