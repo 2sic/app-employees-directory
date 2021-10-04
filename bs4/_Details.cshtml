@@ -1,6 +1,8 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
-
+@{
+  var googleMapDomId = "app-peopledirectory4-google-map-js-" + @CmsContext.Module.Id;
+}
 <div class="app-peopledirectory4-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
@@ -46,11 +48,11 @@
     @* Google Map *@
     <div class="col-md-12 col-lg-5 mt-3 mt-lg-0">
       <div class="app-peopledirectory4-js-google-map-container embed-responsive embed-responsive-16by9">
-        <div class="embed-responsive-item" id="GoogleMap-js-@CmsContext.Module.Id"></div>
+        <div class="embed-responsive-item" id="@googleMapDomId"></div>
       </div>
     </div>
   </div>
 </div>
 
-@Html.Partial("./_Details.PartGoogleMaps.cshtml")
+@Html.Partial("./_Details.PartGoogleMaps.cshtml", new { DomId = googleMapDomId })
 @Html.Partial("./_Assets.cshtml")

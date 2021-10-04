@@ -28,7 +28,7 @@ export function activeGoogleMaps({apiKey, domId, lat, lng, warn, warning } : Map
   if(warn) showKeyWarnings(warning);
 
   loader.load().then((google) => {
-    var map = new google.maps.Map(document.getElementById(`${domId}`), mapOptions);
+    var map = new google.maps.Map(document.getElementById(domId), mapOptions);
 
     new google.maps.Marker({
       position: {

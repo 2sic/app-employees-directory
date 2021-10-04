@@ -1,11 +1,4 @@
-﻿//
-// This SCSS generates the css for the general styles
-//
-// It is used by all CSS generators (Bootstrap3/4, etc.)
-// To keep things simple, it uses the standard variables of
-// bootstrap 4 conventions.
-
-.app-peopledirectory4-wrapper {
+﻿.app-peopledirectory4-wrapper {
   a {
     &.card {
       &:hover {
@@ -33,4 +26,21 @@
       height: 200px;
     }
   }
+}
+
+
+// fix for bs3 alert styling
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert-dark {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
 }
