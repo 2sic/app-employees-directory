@@ -23,14 +23,14 @@ Employees Directory App for 2sxc / DNN
 | Bootstrap 4         | ✅    |
 | Bootstrap 5         | ✔️    | Works well, but not optimized
 
-## Customize the app
+## Customize the App
 
-TODO: 2dm
-
-The Employees Directory App has an important app setting which you can configure with the ["Change Google Maps API Key" checklist](https://azing.org/2sxc/r/XTj19dNS).
+This App uses Google-Maps, and you will need to use your own (free) Maps API key. See the ["change Google Maps API Key" checklist](https://azing.org/2sxc/r/ApSwlItl).
 
 If you want to customize the CSS, you will usually follow the ["Create Custom Styles in a Standard 2sxc App" checklist](https://azing.org/2sxc/r/gg_aB9FD)
 
-## Screenshots
+## History
 
-Read more about it in the [App Catalog](https://2sxc.org/en/apps/app/employee-directory-app-v3)
+* v4 2021-10
+    * Updated to standard v12
+    * no more jQuery
