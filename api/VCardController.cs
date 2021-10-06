@@ -44,7 +44,7 @@ public class VCardController : Custom.Hybrid.Api12
     };
 
     if (Text.Has(person.Image)) {
-      var photoPath = Link.Image(person.Image, width: 250, height: 250, quality: 80, format: "jpg", part: "full");
+      var photoPath = Link.Image(person.Image, width: 250, height: 250, quality: 80, format: "jpg", type: "full");
       card.PhotoBase64 = CreateThumbnail(photoPath);
     }
 
