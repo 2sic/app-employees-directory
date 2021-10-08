@@ -34,5 +34,3 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * v4 2021-10
     * Updated to standard v12
     * no more jQuery
-
-TODO: @2mh - standard google maps
