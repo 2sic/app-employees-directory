@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 #else // DNN
+// 2sxclint:disable:no-web-namespace
 using System.Web;
 using System.Web.Http;
 using FromQueryAttribute = System.Web.Http.FromUriAttribute; // Sync-names to match .net core naming
