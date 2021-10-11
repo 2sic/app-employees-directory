@@ -33,4 +33,6 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 * v4 2021-10
     * Updated to standard v12
+    * Tested / works on Oqtane
     * no more jQuery
+    * vCard generation now in custom API controller
