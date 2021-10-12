@@ -16,8 +16,8 @@ Employees Directory App for 2sxc / DNN
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/2Qsd-qum) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/employee-directory-app-v3)
-| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/employee-directory-app-v3)
+| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/people-directory-v4-hybrid-for-dnn-and-oqtane)
+| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/people-directory-v4-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✔️    | Works but not optimized
 | Bootstrap 4         | ✅    |
