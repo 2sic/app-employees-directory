@@ -4,10 +4,12 @@
   // Activate turnOn in the page - see https://r.2sxc.org/turnon
   GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
 
-  // They Google API key is in the App-Settings. See instructions: https://azing.org/2sxc/r/ippFQYkz
-  // Get key from settings and remove empty lines. 
-  var googleApikey = Settings.GoogleMapsKey.Replace("\n", "");
   var mapSettings = Settings.GoogleMaps;
+
+  // They Google API key is in the App-Settings. See instructions: https://azing.org/2sxc/r/ippFQYkz
+  // The Preset-data is encrypted, so we must decrypt it to use
+  var secureData = GetService<ToSic.Sxc.Services.ISecureDataService>();
+  var googleApikey = secureData.Parse(mapSettings.ApiKey).Value;
 
   // GPS is a JSON field, so we must use AsDynamic to easily access the properties
   var gps = AsDynamic(Content.GPS);
