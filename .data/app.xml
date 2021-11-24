@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-10-14T19:54:43.507214+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.08.02" ExportDate="2021-11-24T12:55:08.796121+01:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -1195,11 +1195,8 @@
       <Value Key="Country" Value="Schweiz" Type="String">
         <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
-      <Value Key="EMail" Value="not.real.e-mail@2sic.com" Type="String">
+      <Value Key="EMail" Value="ijungleboy@somewhere.org" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
-      </Value>
-      <Value Key="EMail" Value="keine.reale.e-mail@2sic.com" Type="String">
-        <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
       <Value Key="FirstName" Value="Daniel" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
