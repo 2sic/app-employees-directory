@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.08.02" ExportDate="2021-11-24T12:55:08.796121+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.00" ExportDate="2021-12-14T17:24:30.5538858+01:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -9,10 +9,10 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="CompanyName" Type="String" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5ce507da-f99e-4542-92c5-8f581fd733bb" Json="True" KeyNumber="1480">
@@ -309,7 +309,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Person" Description="Content-Type to display Employee." Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Person" Description="Content-Type to display Employee." Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="FullName" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="98357e0c-d843-446c-810f-1309ccf4b7f1" Json="True" KeyNumber="1467">
@@ -1104,7 +1104,7 @@
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="04.00.01" Type="String">
+      <Value Key="Version" Value="04.01.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
