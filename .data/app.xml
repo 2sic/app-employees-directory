@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.01" ExportDate="2022-01-05T09:21:28.9439828+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.01.00" ExportDate="2022-01-27T17:52:20.8213318+01:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -15,7 +15,7 @@
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="CompanyName" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5ce507da-f99e-4542-92c5-8f581fd733bb" Json="True" KeyNumber="1480">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5ce507da-f99e-4542-92c5-8f581fd733bb" Json="True" KeyNumber="1480">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -51,7 +51,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="46051c8f-212a-4053-ad1e-72b5b6211ea4" Json="True" KeyNumber="1480">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="46051c8f-212a-4053-ad1e-72b5b6211ea4" Json="True" KeyNumber="1480">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -61,7 +61,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="CompanyUrl" Type="Hyperlink" IsTitle="true">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b9b976d2-c93e-4b88-aa7e-5cd4b6472a41" Json="True" KeyNumber="1481">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b9b976d2-c93e-4b88-aa7e-5cd4b6472a41" Json="True" KeyNumber="1481">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -97,7 +97,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Hyperlink" AttributeSetName="@Hyperlink" EntityGUID="3f128f42-bd2f-4932-ad04-8790faf8553d" Json="True" KeyNumber="1481">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Hyperlink" AttributeSetName="@Hyperlink" EntityGUID="3f128f42-bd2f-4932-ad04-8790faf8553d" Json="True" KeyNumber="1481">
             <Value Key="Buttons" Value="adam,more" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -128,7 +128,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="CompanyPhone" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a88980e3-a0a7-4b0e-a452-415a789890db" Json="True" KeyNumber="1482">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a88980e3-a0a7-4b0e-a452-415a789890db" Json="True" KeyNumber="1482">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -164,7 +164,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="8ebab71d-6931-4382-8f00-c881a63961fe" Json="True" KeyNumber="1482">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="8ebab71d-6931-4382-8f00-c881a63961fe" Json="True" KeyNumber="1482">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -174,7 +174,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="GoogleMapGroup" Type="Empty" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="15a34811-f1df-4552-9882-ffd7935256d0" Json="True" KeyNumber="4270">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="15a34811-f1df-4552-9882-ffd7935256d0" Json="True" KeyNumber="4270">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -206,14 +206,14 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@empty-default" AttributeSetName="@empty-default" EntityGUID="8f6ba69e-a0d8-46be-b9a0-60d052d9c1b9" Json="True" KeyNumber="4270">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@empty-default" AttributeSetName="@empty-default" EntityGUID="8f6ba69e-a0d8-46be-b9a0-60d052d9c1b9" Json="True" KeyNumber="4270">
             <Value Key="DefaultCollapsed" Value="False" Type="Boolean">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
         </Attribute>
         <Attribute StaticName="GoogleMapsKey" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f0f0f525-d3c0-4a60-931e-4e09678ed84a" Json="True" KeyNumber="4271">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f0f0f525-d3c0-4a60-931e-4e09678ed84a" Json="True" KeyNumber="4271">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -245,7 +245,7 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="69f97fa4-c76d-475e-9ad9-a3616c17db45" Json="True" KeyNumber="4271">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="69f97fa4-c76d-475e-9ad9-a3616c17db45" Json="True" KeyNumber="4271">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -253,14 +253,14 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="e08078d3-42e1-4f36-9e73-ec17d2c4cd6a" Json="True" KeyNumber="4271">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="e08078d3-42e1-4f36-9e73-ec17d2c4cd6a" Json="True" KeyNumber="4271">
             <Value Key="RowCount" Value="5" Type="Number">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
         </Attribute>
         <Attribute StaticName="GoogleMapsShowWarning" Type="Boolean" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a199819b-aa22-4c49-a42a-7038270e58b8" Json="True" KeyNumber="4272">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a199819b-aa22-4c49-a42a-7038270e58b8" Json="True" KeyNumber="4272">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -295,7 +295,7 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Boolean" AttributeSetName="@Boolean" EntityGUID="713cca65-9ebb-4f30-b165-179e1edb8a24" Json="True" KeyNumber="4272">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Boolean" AttributeSetName="@Boolean" EntityGUID="713cca65-9ebb-4f30-b165-179e1edb8a24" Json="True" KeyNumber="4272">
             <Value Key="TitleFalse" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -312,7 +312,7 @@
     <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Person" Description="Content-Type to display Employee." Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="FullName" Type="String" IsTitle="true">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="98357e0c-d843-446c-810f-1309ccf4b7f1" Json="True" KeyNumber="1467">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="98357e0c-d843-446c-810f-1309ccf4b7f1" Json="True" KeyNumber="1467">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -353,7 +353,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="d7f8d0c5-3708-4b74-aebe-f909c50312d0" Json="True" KeyNumber="1467">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="d7f8d0c5-3708-4b74-aebe-f909c50312d0" Json="True" KeyNumber="1467">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -366,7 +366,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="UrlKey" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a3f7433e-d377-4fda-a537-9abaef6f9580" Json="True" KeyNumber="4341">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a3f7433e-d377-4fda-a537-9abaef6f9580" Json="True" KeyNumber="4341">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -401,7 +401,7 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="955bced6-dfb1-4eaa-8ab7-ff65f9d56ceb" Json="True" KeyNumber="4341">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="955bced6-dfb1-4eaa-8ab7-ff65f9d56ceb" Json="True" KeyNumber="4341">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -409,7 +409,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-url-path" AttributeSetName="@string-url-path" EntityGUID="c1fae095-b653-4f89-86a4-0eb7c585cf09" Json="True" KeyNumber="4341">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-url-path" AttributeSetName="@string-url-path" EntityGUID="c1fae095-b653-4f89-86a4-0eb7c585cf09" Json="True" KeyNumber="4341">
             <Value Key="AllowSlashes" Value="False" Type="Boolean">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -419,7 +419,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="FirstName" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5a193ebf-2dc2-42cd-8602-381e5f7c192c" Json="True" KeyNumber="1469">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5a193ebf-2dc2-42cd-8602-381e5f7c192c" Json="True" KeyNumber="1469">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -451,7 +451,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="6557b397-3f6b-4378-a633-7580fe759b9e" Json="True" KeyNumber="1469">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="6557b397-3f6b-4378-a633-7580fe759b9e" Json="True" KeyNumber="1469">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -464,7 +464,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="LastName" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="07762df7-9145-4ac8-b859-297ec225dd1c" Json="True" KeyNumber="1470">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="07762df7-9145-4ac8-b859-297ec225dd1c" Json="True" KeyNumber="1470">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -496,7 +496,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="170e22b6-0f5b-4abf-a4ad-7529a59a76f2" Json="True" KeyNumber="1470">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="170e22b6-0f5b-4abf-a4ad-7529a59a76f2" Json="True" KeyNumber="1470">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -509,7 +509,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="Function" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9884bf43-801a-4462-becc-88f84bedb519" Json="True" KeyNumber="1477">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9884bf43-801a-4462-becc-88f84bedb519" Json="True" KeyNumber="1477">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -541,7 +541,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="363f19fe-1a19-44a4-8c52-86ad574843a5" Json="True" KeyNumber="1477">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="363f19fe-1a19-44a4-8c52-86ad574843a5" Json="True" KeyNumber="1477">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -554,7 +554,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="Image" Type="Hyperlink" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="2b5f9151-b228-4a14-ab92-da3869762735" Json="True" KeyNumber="1478">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="2b5f9151-b228-4a14-ab92-da3869762735" Json="True" KeyNumber="1478">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -586,7 +586,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Hyperlink" AttributeSetName="@Hyperlink" EntityGUID="6d3c9ecc-731f-4dd5-89e9-c12f794f587b" Json="True" KeyNumber="1478">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Hyperlink" AttributeSetName="@Hyperlink" EntityGUID="6d3c9ecc-731f-4dd5-89e9-c12f794f587b" Json="True" KeyNumber="1478">
             <Value Key="Buttons" Value="adam,more" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -614,7 +614,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="AdditionalNotes" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="292e0dac-b518-42e5-ae76-54a5539bf80c" Json="True" KeyNumber="1479">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="292e0dac-b518-42e5-ae76-54a5539bf80c" Json="True" KeyNumber="1479">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -650,7 +650,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="5eeb3e95-b994-4bbf-bb13-5ea6416ad55c" Json="True" KeyNumber="1479">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="5eeb3e95-b994-4bbf-bb13-5ea6416ad55c" Json="True" KeyNumber="1479">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -661,7 +661,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-wysiwyg" AttributeSetName="@string-wysiwyg" EntityGUID="6022d3fd-69d6-4ac8-b40b-91b2f42b8b89" Json="True" KeyNumber="1479">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-wysiwyg" AttributeSetName="@string-wysiwyg" EntityGUID="6022d3fd-69d6-4ac8-b40b-91b2f42b8b89" Json="True" KeyNumber="1479">
             <Value Key="ButtonAdvanced" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -674,7 +674,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="AddressGroup" Type="Empty" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f3d2645a-79c5-4301-af28-e945503194cf" Json="True" KeyNumber="4339">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f3d2645a-79c5-4301-af28-e945503194cf" Json="True" KeyNumber="4339">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -706,14 +706,14 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@empty-default" AttributeSetName="@empty-default" EntityGUID="23387863-c90b-4428-91c9-6411bca4ebd9" Json="True" KeyNumber="4339">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@empty-default" AttributeSetName="@empty-default" EntityGUID="23387863-c90b-4428-91c9-6411bca4ebd9" Json="True" KeyNumber="4339">
             <Value Key="DefaultCollapsed" Value="False" Type="Boolean">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
         </Attribute>
         <Attribute StaticName="Street" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="31e61640-407a-4dfe-a82c-c6470b723ca9" Json="True" KeyNumber="1471">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="31e61640-407a-4dfe-a82c-c6470b723ca9" Json="True" KeyNumber="1471">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -745,7 +745,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="1a416a3a-eb21-4973-8a62-ba668b7ffce0" Json="True" KeyNumber="1471">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="1a416a3a-eb21-4973-8a62-ba668b7ffce0" Json="True" KeyNumber="1471">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -758,7 +758,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="ZipCode" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9596f497-6d1a-41e3-9a57-c1415158922c" Json="True" KeyNumber="1472">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9596f497-6d1a-41e3-9a57-c1415158922c" Json="True" KeyNumber="1472">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -790,7 +790,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="a05ebd37-9514-40af-b819-16e8fed662bd" Json="True" KeyNumber="1472">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="a05ebd37-9514-40af-b819-16e8fed662bd" Json="True" KeyNumber="1472">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -803,7 +803,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="City" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="86cd0030-904f-419a-b722-3c669f73032e" Json="True" KeyNumber="1473">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="86cd0030-904f-419a-b722-3c669f73032e" Json="True" KeyNumber="1473">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -835,7 +835,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="fe993888-1494-4521-bb93-813f50efaece" Json="True" KeyNumber="1473">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="fe993888-1494-4521-bb93-813f50efaece" Json="True" KeyNumber="1473">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -848,7 +848,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="Country" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="03645ede-43de-4528-a180-6c581cb2e9aa" Json="True" KeyNumber="1474">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="03645ede-43de-4528-a180-6c581cb2e9aa" Json="True" KeyNumber="1474">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -880,7 +880,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="d8a6ed29-1bbd-4702-a2ea-b4cdbd8b0c7f" Json="True" KeyNumber="1474">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="d8a6ed29-1bbd-4702-a2ea-b4cdbd8b0c7f" Json="True" KeyNumber="1474">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -893,7 +893,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="GPS" Type="Custom" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="e168474c-8f82-4420-b6cf-47f6daed54f6" Json="True" KeyNumber="4269">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="e168474c-8f82-4420-b6cf-47f6daed54f6" Json="True" KeyNumber="4269">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -922,7 +922,7 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@custom-gps" AttributeSetName="@custom-gps" EntityGUID="676df41b-349e-400b-b161-a01a8b8cae4d" Json="True" KeyNumber="4269">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@custom-gps" AttributeSetName="@custom-gps" EntityGUID="676df41b-349e-400b-b161-a01a8b8cae4d" Json="True" KeyNumber="4269">
             <Value Key="Address Mask" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -938,7 +938,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="ContactInformationGroup" Type="Empty" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b061c921-3e93-4928-9c29-89846c62d49e" Json="True" KeyNumber="4340">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b061c921-3e93-4928-9c29-89846c62d49e" Json="True" KeyNumber="4340">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -970,14 +970,14 @@
             </Value>
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@empty-default" AttributeSetName="@empty-default" EntityGUID="a926248e-3182-4a5f-a656-6e343dac17b3" Json="True" KeyNumber="4340">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@empty-default" AttributeSetName="@empty-default" EntityGUID="a926248e-3182-4a5f-a656-6e343dac17b3" Json="True" KeyNumber="4340">
             <Value Key="DefaultCollapsed" Value="True" Type="Boolean">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
         </Attribute>
         <Attribute StaticName="Phone" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="8e031a86-b21a-440e-96a8-aafe8d945b2d" Json="True" KeyNumber="1475">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="8e031a86-b21a-440e-96a8-aafe8d945b2d" Json="True" KeyNumber="1475">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -1009,7 +1009,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="13433278-2e53-4dff-a752-478c80abf17e" Json="True" KeyNumber="1475">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="13433278-2e53-4dff-a752-478c80abf17e" Json="True" KeyNumber="1475">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -1022,7 +1022,7 @@
           </Entity>
         </Attribute>
         <Attribute StaticName="EMail" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="54f85b40-dd8e-4b22-9573-afef972ed3ed" Json="True" KeyNumber="1476">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="54f85b40-dd8e-4b22-9573-afef972ed3ed" Json="True" KeyNumber="1476">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -1051,7 +1051,7 @@
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="554ccfab-b1db-4de8-ac75-b13ba90c5577" Json="True" KeyNumber="1476">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="554ccfab-b1db-4de8-ac75-b13ba90c5577" Json="True" KeyNumber="1476">
             <Value Key="DropdownValues" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -1067,7 +1067,7 @@
     </AttributeSet>
   </AttributeSets>
   <Entities>
-    <Entity AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="efbda3e9-d66f-47a1-906c-0b4f190145c3" Json="True" KeyNumber="76">
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="efbda3e9-d66f-47a1-906c-0b4f190145c3" Json="True" KeyNumber="76">
       <Value Key="AllowRazorTemplates" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1108,7 +1108,7 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="32b2cf2a-febe-441b-ae7e-f3fed4405b1c" KeyNumber="76">
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="32b2cf2a-febe-441b-ae7e-f3fed4405b1c" KeyNumber="76">
       <Value Key="CompanyName" Value="2sic Internet Solutions" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1125,8 +1125,8 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="0a4e5126-3ea4-4662-9a9b-539578ebaf14" KeyNumber="76" />
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="ce6ba7a3-a590-4952-bca0-f7d6caac1d68">
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="0a4e5126-3ea4-4662-9a9b-539578ebaf14" KeyNumber="76" />
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="ce6ba7a3-a590-4952-bca0-f7d6caac1d68">
       <Value Key="AdditionalNotes" Value="&lt;p&gt;Need help getting started? Take a look at &lt;a href=&quot;https://azing.org/2sxc/r/2Qsd-qum&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this checklist&lt;/a&gt;.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1179,7 +1179,7 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="33cfd4e6-563a-432c-8337-25b1fe8c8f55">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="33cfd4e6-563a-432c-8337-25b1fe8c8f55">
       <Value Key="AdditionalNotes" Value="&lt;p&gt;Need help getting started? Take a look at &lt;a href=&quot;https://azing.org/2sxc/r/2Qsd-qum&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this checklist&lt;/a&gt;.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1232,24 +1232,25 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7" Json="True">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7" Json="True">
       <Value Key="AllowEdit" Value="True" Type="Boolean" />
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="PersonUrlKey" Type="String" />
-      <Value Key="Params" Value="UrlKey=[QueryString:Employee||[QueryString:id]]" Type="String" />
+      <Value Key="Params" Value="UrlKey=[QueryString:id]" Type="String" />
       <Value Key="StreamsOut" Value="Default,Header" Type="String" />
       <Value Key="StreamWiring" Value="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default&gt;Out:Default&#xD;&#xA;97edaf77-c49f-4e98-868d-3eb3a5096f76:Person&gt;3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default" Type="String" />
       <Value Key="TestParameters" Value="[Params:UrlKey]=daniel-mettler" Type="String" />
+      <Value Key="VisualDesignerData" Value="" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="68005437-fcea-4ef7-aa7d-69fc509d23b6" Json="True" KeyGuid="95ea46e9-233b-4c06-8674-69534513b9b0">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="68005437-fcea-4ef7-aa7d-69fc509d23b6" Json="True" KeyGuid="95ea46e9-233b-4c06-8674-69534513b9b0">
       <Value Key="EntityIds" Value="[Params:UrlKey||0]" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="3ae16cea-1858-4996-beef-e9a632965c22" Json="True" KeyGuid="79a9a7a3-0673-43cf-a734-0595451e1fe8">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="3ae16cea-1858-4996-beef-e9a632965c22" Json="True" KeyGuid="79a9a7a3-0673-43cf-a734-0595451e1fe8">
       <Value Key="TypeName" Value="a7abc3ba-59df-40c5-a7dd-13be92507701" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="b5659670-8cb3-4dac-97c9-6a03af4ec772" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="b5659670-8cb3-4dac-97c9-6a03af4ec772" Json="True">
       <Value Key="ContentTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1308,7 +1309,7 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="59f77e2d-730d-4ee3-b395-f738b9516981" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="59f77e2d-730d-4ee3-b395-f738b9516981" Json="True">
       <Value Key="ContentTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1361,11 +1362,11 @@
       <Value Key="ViewController" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="ViewNameInUrl" Value="Employee/.*" Type="String">
+      <Value Key="ViewNameInUrl" Value="id/.*" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="70e4db4b-d2f1-47c5-96b2-19a3673bdb3c" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="70e4db4b-d2f1-47c5-96b2-19a3673bdb3c" Json="True">
       <Value Key="ContentDemoEntity" Value="ce6ba7a3-a590-4952-bca0-f7d6caac1d68" Type="Entity" />
       <Value Key="ContentTypeStaticName" Value="a7abc3ba-59df-40c5-a7dd-13be92507701" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
@@ -1422,12 +1423,12 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="8fa204a0-6a1b-4a73-bb15-785546728e2f" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="8fa204a0-6a1b-4a73-bb15-785546728e2f" Json="True">
       <Value Key="Content" Value="33cfd4e6-563a-432c-8337-25b1fe8c8f55" Type="Entity" />
       <Value Key="Presentation" Value="null" Type="Entity" />
       <Value Key="Template" Value="70e4db4b-d2f1-47c5-96b2-19a3673bdb3c" Type="Entity" />
     </Entity>
-    <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="ContentType" AttributeSetName="ContentType" EntityGUID="50f9779b-3f00-4fbb-a72d-8d0ffa41a932" Json="True" KeyString="a7abc3ba-59df-40c5-a7dd-13be92507701">
+    <Entity TargetType="5" AssignmentObjectType="ContentType" AttributeSetStaticName="ContentType" AttributeSetName="ContentType" EntityGUID="50f9779b-3f00-4fbb-a72d-8d0ffa41a932" Json="True" KeyString="a7abc3ba-59df-40c5-a7dd-13be92507701">
       <Value Key="Description" Value="Content-Type for Employees" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1459,23 +1460,23 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="b567ded2-8f27-4cb6-b3aa-f52bee6ec9d9" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="b567ded2-8f27-4cb6-b3aa-f52bee6ec9d9" Json="True">
       <Value Key="Content" Value="null,null,33cfd4e6-563a-432c-8337-25b1fe8c8f55" Type="Entity" />
       <Value Key="Presentation" Value="null,null,null" Type="Entity" />
       <Value Key="Template" Value="b5659670-8cb3-4dac-97c9-6a03af4ec772" Type="Entity" />
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="3937fa17-ef2d-40a7-b089-64164eb10bab" AttributeSetName="2sxcPolymorphismConfiguration" EntityGUID="f4491b9b-fd86-4c15-9603-1f840f7174ab" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="3937fa17-ef2d-40a7-b089-64164eb10bab" AttributeSetName="2sxcPolymorphismConfiguration" EntityGUID="f4491b9b-fd86-4c15-9603-1f840f7174ab" Json="True">
       <Value Key="Mode" Value="Koi?cssFramework" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="Filter: Match UrlKey" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
       <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 212,&#xD;&#xA;  &quot;Left&quot;: 432&#xD;&#xA;}" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="db51604c-e16c-4b0e-8945-c62e55ad65e7" Json="True" KeyGuid="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="db51604c-e16c-4b0e-8945-c62e55ad65e7" Json="True" KeyGuid="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc">
       <Value Key="Attribute" Value="UrlKey" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1489,18 +1490,18 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="97edaf77-c49f-4e98-868d-3eb3a5096f76" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="97edaf77-c49f-4e98-868d-3eb3a5096f76" Json="True" KeyGuid="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="App" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
       <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 580,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="c8eee91e-c6ce-434f-b8e7-d3c169f84d30" Json="True" KeyGuid="b2e3606e-3d1d-492e-a82a-17989038b232">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="c8eee91e-c6ce-434f-b8e7-d3c169f84d30" Json="True" KeyGuid="b2e3606e-3d1d-492e-a82a-17989038b232">
       <Value Key="EntityIds" Value="[Params:Id]" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Json="True">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Json="True">
       <Value Key="AllowEdit" Value="True" Type="Boolean" />
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="All Persons" Type="String" />
@@ -1509,19 +1510,19 @@
       <Value Key="StreamWiring" Value="9ed29003-a493-4f2c-91bb-58e755573098:Person&gt;59f96bbc-1be2-4bb1-a370-40e6a1555f2c:Default&#xD;&#xA;59f96bbc-1be2-4bb1-a370-40e6a1555f2c:Default&gt;Out:Default" Type="String" />
       <Value Key="TestParameters" Value="" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="9ed29003-a493-4f2c-91bb-58e755573098" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="9ed29003-a493-4f2c-91bb-58e755573098" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="App" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
       <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 400,&#xD;&#xA;  &quot;Left&quot;: 260&#xD;&#xA;}" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="59f96bbc-1be2-4bb1-a370-40e6a1555f2c" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="59f96bbc-1be2-4bb1-a370-40e6a1555f2c" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="Value Sort" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueSort, ToSic.Eav.DataSources" Type="String" />
       <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 180,&#xD;&#xA;  &quot;Left&quot;: 380&#xD;&#xA;}" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueSort" AttributeSetName="ToSic.Eav.DataSources.ValueSort" EntityGUID="cfc3a902-879e-4b80-a753-7271f05be3f3" Json="True" KeyGuid="59f96bbc-1be2-4bb1-a370-40e6a1555f2c">
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueSort" AttributeSetName="ToSic.Eav.DataSources.ValueSort" EntityGUID="cfc3a902-879e-4b80-a753-7271f05be3f3" Json="True" KeyGuid="59f96bbc-1be2-4bb1-a370-40e6a1555f2c">
       <Value Key="Attributes" Value="FullName" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1532,7 +1533,7 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="ebc32f90-e0fc-4f65-849b-dae738f1451c" Json="True" KeyGuid="b5659670-8cb3-4dac-97c9-6a03af4ec772" />
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="ebc32f90-e0fc-4f65-849b-dae738f1451c" Json="True" KeyGuid="b5659670-8cb3-4dac-97c9-6a03af4ec772" />
   </Entities>
   <PortalFiles>
     <File Id="4554" RelativePath="adam\EmployeesDirectory3\o6drzpClUkm8oPfWyqwdaA\Image\placeholder_q.jpg" />
