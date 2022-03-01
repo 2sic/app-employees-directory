@@ -36,5 +36,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Tested / works on Oqtane
     * no more jQuery
     * vCard generation now in custom API controller
-* v4.01 2022-02
+* v4.01.03 2022-03
     * enabled data-optimizations
