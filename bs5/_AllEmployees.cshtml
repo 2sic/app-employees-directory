@@ -1,5 +1,10 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Services;
+
+@{
+  var imgSvc = GetService<IImageService>();
+}
 
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
@@ -12,7 +17,7 @@
           <div class="row h-100 g-0 align-items-center">
             <div class="col-3">
               @if(Text.Has(employee.Image)) {
-                <img loading="lazy" class="img-fluid ms-2 ms-sm-0" src='@Link.Image(url: employee.Image, width: 200, height: 200, resizeMode: "crop", quality: 90)'>
+                @imgSvc.Picture(employee.Image, settings: imgSvc.Settings("Employees"), imgClass:"img-fluid ms-2 ms-sm-0")
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }

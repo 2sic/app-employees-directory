@@ -38,3 +38,6 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * vCard generation now in custom API controller
 * v4.01.03 2022-03
     * enabled data-optimizations
+* v4.02.00 2022-04 
+    * Changed all access to services to ToSic.Sxc.Services
+    * Changed all image tags to use the IImageService and the picture feature

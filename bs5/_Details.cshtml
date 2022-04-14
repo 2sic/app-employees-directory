@@ -1,13 +1,16 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Services;
+
 @{
+  var imgSvc = GetService<IImageService>();
   var googleMapDomId = "app-peopledirectory4-google-map-js-" + @CmsContext.Module.Id;
 }
 <div class="app-peopledirectory4-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
       @if(Text.Has(Content.Image)) {
-        <img loading="lazy" class="img-fluid mb-3 mb-md-0 emp-image" src='@Link.Image(url: Content.Image, width: 400, height: 400, quality: 90)' />
+        @imgSvc.Picture(Content.Image, settings: imgSvc.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image")
       } else {
         <div class="bg-primary img-placeholder"></div>
       }

@@ -1,7 +1,8 @@
 @inherits Custom.Hybrid.Razor12
+@using ToSic.Sxc.Services;
 @{
   // get CSS information about the current Theme
-  var page = GetService<ToSic.Sxc.Web.IPageService>();
+  var page = GetService<IPageService>();
   var pageCss = GetService<Connect.Koi.ICss>();
 }
 
