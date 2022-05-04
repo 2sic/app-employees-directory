@@ -3,6 +3,7 @@
 @using ToSic.Sxc.Services;
 
 @{
+  // Image Service used to generate optimal images
   var imgSvc = GetService<IImageService>();
   var imgSettings = AsDynamic(Settings.Images.Employees, Settings.Images.Content);
 }
@@ -15,7 +16,7 @@
           <div class="row h-100 g-0 align-items-center">
             <div class="col-3">
               @if(Text.Has(employee.Image)) {
-                @imgSvc.Picture(employee.Image, settings: Settings.Images.Employees, imgClass:"img-fluid ms-2 ms-sm-0")
+                @imgSvc.Picture(employee.Field("Image"), settings: Settings.Images.Employees, imgClass:"img-fluid ms-2 ms-sm-0")
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }
