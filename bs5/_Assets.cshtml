@@ -14,5 +14,5 @@
   </div>
 }
 
-<link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" data-enableoptimizations="true">
-<script src="@App.Path/bs5/dist/scripts.min.js" data-enableoptimizations="true"></script>
+<link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" @(page.AssetAttributes())>
+<script src="@App.Path/bs5/dist/scripts.min.js" @(page.AssetAttributes())></script>

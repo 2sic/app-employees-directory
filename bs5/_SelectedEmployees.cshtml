@@ -5,7 +5,7 @@
 @{
   // Image Service used to generate optimal images
   var imgSvc = GetService<IImageService>();
-  var imgSettings = AsDynamic(Settings.Images.Employees, Settings.Images.Content);
+  var imgSettings = AsDynamic(Settings.Images.Employees, "Content");
 }
 
 <div class="app-peopledirectory4-wrapper">
