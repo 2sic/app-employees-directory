@@ -2,7 +2,7 @@
 @using ToSic.Sxc.Services;
 @{
   // get CSS information about the current Theme
-  var page = GetService<IPageService>();
+  var pageSvc = GetService<IPageService>();
   var pageCss = GetService<Connect.Koi.ICss>();
 }
 
@@ -14,5 +14,5 @@
   </div>
 }
 
-<link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" @(page.AssetAttributes())>
-<script src="@App.Path/bs5/dist/scripts.min.js" @(page.AssetAttributes())></script>
+<link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" @pageSvc.AssetAttributes()>
+<script src="@App.Path/bs5/dist/scripts.min.js" @pageSvc.AssetAttributes()></script>

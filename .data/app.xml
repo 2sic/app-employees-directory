@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.02.00" ExportDate="2022-02-03T16:25:08.6903961+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.11.00" ExportDate="2022-05-10T14:28:07.7667164+02:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -564,6 +564,9 @@
             <Value Key="Disabled" Value="False" Type="Boolean">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="63" ReadOnly="false" />
+            </Value>
             <Value Key="InputType" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
@@ -574,6 +577,9 @@
               <Dimension DimensionID="64" ReadOnly="false" />
             </Value>
             <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="63" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
             <Value Key="Required" Value="False" Type="Boolean">
@@ -593,10 +599,16 @@
             <Value Key="DefaultDialog" Value="ImageManager" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
+            <Value Key="EnableImageConfiguration" Value="True" Type="Boolean">
+              <Dimension DimensionID="63" ReadOnly="false" />
+            </Value>
             <Value Key="FileFilter" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
             <Value Key="Paths" Value="Employees/" Type="String">
+              <Dimension DimensionID="63" ReadOnly="false" />
+            </Value>
+            <Value Key="ServerResourceMapping" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
             <Value Key="ShowAdam" Value="True" Type="Boolean">
@@ -1095,16 +1107,16 @@
       <Value Key="RequiredDnnVersion" Value="07.04.02" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="02.02.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="03.01.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="12.05.00" Type="String">
+      <Value Key="RequiredVersion" Value="13.10.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="04.01.03" Type="String">
+      <Value Key="Version" Value="04.02.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1240,7 +1252,7 @@
       <Value Key="StreamsOut" Value="Default,Header" Type="String" />
       <Value Key="StreamWiring" Value="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default&gt;Out:Default&#xD;&#xA;97edaf77-c49f-4e98-868d-3eb3a5096f76:Person&gt;3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc:Default" Type="String" />
       <Value Key="TestParameters" Value="[Params:UrlKey]=daniel-mettler" Type="String" />
-      <Value Key="VisualDesignerData" Value="" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&quot;ShowDataSourceDetails&quot;:true}" Type="String" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="68005437-fcea-4ef7-aa7d-69fc509d23b6" Json="True" KeyGuid="95ea46e9-233b-4c06-8674-69534513b9b0">
       <Value Key="EntityIds" Value="[Params:UrlKey||0]" Type="String" />
@@ -1474,7 +1486,7 @@
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="Filter: Match UrlKey" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 212,&#xD;&#xA;  &quot;Left&quot;: 432&#xD;&#xA;}" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 220,&#xD;&#xA;  &quot;Left&quot;: 320&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueFilter" AttributeSetName="ToSic.Eav.DataSources.ValueFilter" EntityGUID="db51604c-e16c-4b0e-8945-c62e55ad65e7" Json="True" KeyGuid="3b7f23cf-51a9-4ad5-944e-95edbd3b0fbc">
       <Value Key="Attribute" Value="UrlKey" Type="String">
@@ -1494,7 +1506,7 @@
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="App" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 580,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 540,&#xD;&#xA;  &quot;Left&quot;: 400&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityIdFilter" AttributeSetName="ToSic.Eav.DataSources.EntityIdFilter" EntityGUID="c8eee91e-c6ce-434f-b8e7-d3c169f84d30" Json="True" KeyGuid="b2e3606e-3d1d-492e-a82a-17989038b232">
       <Value Key="EntityIds" Value="[Params:Id]" Type="String">
@@ -1509,18 +1521,19 @@
       <Value Key="StreamsOut" Value="Default,Header" Type="String" />
       <Value Key="StreamWiring" Value="9ed29003-a493-4f2c-91bb-58e755573098:Person&gt;59f96bbc-1be2-4bb1-a370-40e6a1555f2c:Default&#xD;&#xA;59f96bbc-1be2-4bb1-a370-40e6a1555f2c:Default&gt;Out:Default" Type="String" />
       <Value Key="TestParameters" Value="" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&quot;ShowDataSourceDetails&quot;:true}" Type="String" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="9ed29003-a493-4f2c-91bb-58e755573098" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="App" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 400,&#xD;&#xA;  &quot;Left&quot;: 260&#xD;&#xA;}" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 400,&#xD;&#xA;  &quot;Left&quot;: 480&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="59f96bbc-1be2-4bb1-a370-40e6a1555f2c" Json="True" KeyGuid="4372b3f1-d4f5-4941-beac-1ebdbff6486c">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="Value Sort" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueSort, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 180,&#xD;&#xA;  &quot;Left&quot;: 380&#xD;&#xA;}" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 180,&#xD;&#xA;  &quot;Left&quot;: 400&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueSort" AttributeSetName="ToSic.Eav.DataSources.ValueSort" EntityGUID="cfc3a902-879e-4b80-a753-7271f05be3f3" Json="True" KeyGuid="59f96bbc-1be2-4bb1-a370-40e6a1555f2c">
       <Value Key="Attributes" Value="FullName" Type="String">
@@ -1534,6 +1547,79 @@
       </Value>
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="ebc32f90-e0fc-4f65-849b-dae738f1451c" Json="True" KeyGuid="b5659670-8cb3-4dac-97c9-6a03af4ec772" />
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="1a86b080-9e0d-4207-97d2-04edf80b4f2f" AttributeSetName="⚙️Image" EntityGUID="088fd8fb-47f3-44f4-b673-e0bf9da573d0" Json="True">
+      <Value Key="Advanced" Value="{&#xD;&#xA;  &quot;recipe&quot;:{&#xD;&#xA;    &quot;setHeight&quot;: true, &#xD;&#xA;    &quot;setWidth&quot;: true,&#xD;&#xA;    &quot;variants&quot;:&quot;2*, 1.5*, 1*, 0.75*, 0.5*&quot;&#xD;&#xA;  }&#xD;&#xA;}" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="AspectRatio" Value="1" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Format" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ItemIdentifier" Value="Employees" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Quality" Value="90" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ResizeMode" Value="crop" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ScaleMode" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="SettingsIdentifier" Value="Images.Employees" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Width" Value="200" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="7edd0b8d-1405-44ed-ac33-d0d63a274bd6" AttributeSetName="⚙️Images" EntityGUID="da652f74-a131-49e5-a9f1-f6af417b5345" Json="True">
+      <Value Key="Items" Value="088fd8fb-47f3-44f4-b673-e0bf9da573d0" Type="Entity" />
+      <Value Key="SettingsIdentifier" Value="Images" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="813a3cb7-1a89-4477-bdfe-8863ab3ae59a" AttributeSetName="SettingsSystem" EntityGUID="a3c066bc-e5b9-4527-a874-9efb405f0160" Json="True">
+      <Value Key="Images" Value="da652f74-a131-49e5-a9f1-f6af417b5345" Type="Entity" />
+      <Value Key="SettingsEntityScope" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="System Settings" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="be34f64b-7d1f-4ad0-b488-dabbbb01a186" AttributeSetName="LightSpeedOutputDecorator" EntityGUID="42609109-ed7e-4573-a7f5-15eda2f9c504" Json="True" KeyNumber="76">
+      <Value Key="Advanced" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="ByUrlParameters" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Duration" Value="14400" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="DurationEditors" Value="300" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="DurationSystemAdmin" Value="300" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="DurationUsers" Value="-1" Type="Number">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="IsEnabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="✅ - Users 14400s, Reg 🚫, Editors 300s, SysAdmins 300s" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="UrlParametersCaseSensitive" Value="False" Type="Boolean">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4554" RelativePath="adam\EmployeesDirectory3\o6drzpClUkm8oPfWyqwdaA\Image\placeholder_q.jpg" />
