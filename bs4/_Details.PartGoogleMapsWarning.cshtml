@@ -1,8 +1,8 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
 @{
   var mapSettings = Settings.GoogleMaps;
-  var warn = Convert.ToBool(mapSettings.ShowApiKeyWarning, fallback: false);
+  var warn = Kit.Convert.ToBool(mapSettings.ShowApiKeyWarning, fallback: false);
 }
 @if(warn) {
   <div class="alert alert-danger">

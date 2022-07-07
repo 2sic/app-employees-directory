@@ -17,7 +17,7 @@ using System.Net.Http;
 using System.Text;
 using ToSic.Razor.Blade;
 
-public class VCardController : Custom.Hybrid.Api12
+public class VCardController : Custom.Hybrid.Api14
 {
   [HttpGet]
   [AllowAnonymous]

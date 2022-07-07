@@ -41,3 +41,8 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * v4.02.00 2022-04 
     * Changed all access to services to ToSic.Sxc.Services
     * Changed all image tags to use the IImageService and the picture feature
+* v4.03.00 2022-06 
+    * Replaced all base classes with their 2sxc 14 equivalents 
+    * Replaced GetService<> with the new ServiceKit14
+    * Updated webpack 
+    * Changed the toolbar configurations to use the IToolbarService

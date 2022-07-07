@@ -1,24 +1,17 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
-
 @{
-  // Image Service used to generate optimal images
-  var imgSvc = GetService<IImageService>();
+  var employeeToolbar = Kit.Toolbar.Default().Delete();
 }
-
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
     @foreach(var employee in AsList(Data)) {
-      <div class="col mb-4" @Edit.TagToolbar(employee, toolbar: new [] {
-        "%new&show=true?contentType=Person&entityId=0",
-        "%delete&show=true"
-      })>
+      <div class="col mb-4" @employeeToolbar.For(employee)>
         <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: "id=" + employee.UrlKey))'>
           <div class="row h-100 g-0 align-items-center">
             <div class="col-3">
               @if(Text.Has(employee.Image)) {
-                @imgSvc.Picture(employee.Field("Image"), settings: imgSvc.Settings("Employees"), imgClass:"img-fluid ms-2 ms-sm-0")
+                @Kit.Image.Picture(employee.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid ms-2 ms-sm-0")
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }

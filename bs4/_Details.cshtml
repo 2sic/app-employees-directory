@@ -1,18 +1,17 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
 
 @{
-  // Image Service used to generate optimal images
-  var imgSvc = GetService<IImageService>();
   var googleMapDomId = "app-peopledirectory4-google-map-js-" + @CmsContext.Module.Id;
+
+  var contentToolbar = Kit.Toolbar.Default().Layout("-");
 }
 
-<div class="app-peopledirectory4-details" @Edit.TagToolbar(Content, toolbar: "-layout")>
+<div class="app-peopledirectory4-details" @contentToolbar.For(Content)>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
       @if(Text.Has(Content.Image)) {
-        @imgSvc.Picture(Content.Field("Image"), settings: imgSvc.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image")
+        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image")
       } else {
         <div class="bg-primary img-placeholder"></div>
       }
