@@ -2,62 +2,95 @@
 @using ToSic.Razor.Blade;
 
 @{
-  var googleMapDomId = "app-peopledirectory4-google-map-js-" + @CmsContext.Module.Id;
+  Kit.Page.Activate("FontAwesome5");
 
-  var contentToolbar = Kit.Toolbar.Default().Layout("-");
+  var Person = Content;
+
+  var personToolbar = Kit.Toolbar.Default(Person);
 }
 
-<div class="app-peopledirectory4-details" @contentToolbar.For(Content)>
-  <div class="row">
-    <div class="col-12 col-md-3 col-lg-2 col-xl-2">
-      @if(Text.Has(Content.Image)) {
-        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image")
-      } else {
-        <div class="bg-primary img-placeholder"></div>
-      }
-    </div>
-    <div class="col-12 col-md-9 col-lg-5 col-xl-5">
-      <h2>@Content.FullName</h2>
-      <p>@Content.Function</p>
-      <div class="row">
-        @* Address *@
-        <div class="col-12 col-md-6 col-lg-12">
-          <p>
-            @if(Text.Has(Content.Street)) {
-              @Content.Street<br/>
-            }
-            @if(Text.Has(Content.ZipCode) || Text.Has(Content.City)) {
-              @(Content.ZipCode + " " + Content.City)<br/>
-            }
-            @if(Text.Has(Content.Country)) {
-              @Content.Country
-            }
-          </p>
-        </div>
-        @* Contact Information *@
-        <div class="col-12 col-md-6 col-lg-12">
-          <p>
-            @if(Text.Has(Content.Phone)) {
-              @Content.Phone<br/>
-            }
-            @if(Text.Has(Content.EMail)) {
-              <a href="mailto:@Content.EMail">@Content.EMail</a><br/>
-            }
-            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Content.UrlKey)' target="_blank">vCard</a>
-          </p>
-        </div>
-        <div class="col-12">@Html.Raw(Content.AdditionalNotes)</div>
+@if(Person != null){
+
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="col-12 col-lg-7">
+        <h1>
+          @Person.Title
+        </h1>
+        @Html.Raw(Person.Text)
+        <a class="btn btn-cyan rounded-pill btn-large" href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Person.UrlKey)' target="_blank">
+          Meine Daten zu deinen Kontakten hinzufügen
+        </a>
       </div>
-    </div>
-    @* Google Map *@
-    <div class="col-md-12 col-lg-5 mt-3 mt-lg-0">
-      <div class="app-peopledirectory4-js-google-map-container embed-responsive embed-responsive-16by9">
-        <div class="embed-responsive-item ratio ratio-21x9" id="@googleMapDomId"></div>
-        @Html.Partial("_Details.PartGoogleMapsWarning.cshtml")
+      <div class="col-12 col-lg-3 offset-lg-1 card-wrapper" @personToolbar>
+        <div class="shadow rounded-custom bg-white p-3 d-flex flex-column alging-items-center text-center">
+          <div class="mb-1">
+            @Kit.Image.Picture(Person.Image, settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid rounded-circle")
+          </div>
+          <strong>
+            @Person.FullName
+          </strong>
+          <p class="small">
+            @Person.Function
+          </p>
+          <p>
+            <span class="small">
+              @Person.Street
+            </span>
+            <br>
+            <span class="small">
+              @Person.ZipCode @Person.City
+            </span>
+            ,
+            <span class="small">
+              @Person.Country
+            </span>
+          </p>
+          <p class="small">
+            <a class="fw-bold mb-1" href="tel:+41 81 750 67 70">
+              Telefon @Person.Phone
+            </a>
+            <br>
+            <a class="fw-bold" href="mailto:daniel.mettler@2sic.com">
+              @Person.EMail
+            </a>
+          </p>
+          <p class="d-flex justify-content-around">
+            @if(Text.Has(Person.LinkedIn)){
+              <a href="@Person.LinkedIn" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            }
+            @if(Text.Has(Person.Facebook)){
+              <a href="@Person.Facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            }
+            @if(Text.Has(Person.Twitter)){
+              <a href="@Person.Twitter" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            }
+            @if(Text.Has(Person.Instagram)){
+              <a href="@Person.Instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            }
+          </p>
+        </div>
+
+        <a class="btn btn-cyan rounded-pill btn-small" href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Person.UrlKey)' target="_blank">
+          Meine Daten zu deinen Kontakten hinzufügen
+        </a>
+
       </div>
     </div>
   </div>
-</div>
 
-@Html.Partial("./_Details.PartGoogleMaps.cshtml", new { DomId = googleMapDomId })
+} else {
+  <h1>
+    There is no employee selected. Please select one from the list below.
+  </h1>
+}
+
 @Html.Partial("./_Assets.cshtml")

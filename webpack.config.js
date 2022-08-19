@@ -15,10 +15,6 @@ module.exports = (env) => {
     mode: 'production',
     devtool: 'source-map',
     watch: true,
-    stats: {
-      all: false,
-      assets: true
-    },
     cache: {
       type: 'filesystem',
       cacheDirectory: path.resolve(__dirname, '.temp_cache'),

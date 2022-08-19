@@ -2,12 +2,15 @@
 @using ToSic.Razor.Blade;
 @{
   var employeeToolbar = Kit.Toolbar.Default().Delete();
+
 }
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
     @foreach(var employee in AsList(Data)) {
+      var urlParamters = Settings.DetailsView == true ? "person=" : "id=";
+
       <div class="col mb-4" @employeeToolbar.For(employee)>
-        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: "id=" + employee.UrlKey))'>
+        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: @urlParamters + employee.UrlKey))'>
           <div class="row h-100 g-0 align-items-center">
             <div class="col-3">
               @if(Text.Has(employee.Image)) {

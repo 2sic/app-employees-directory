@@ -1,0 +1,50 @@
+.card-wrapper{
+  @media(max-width:992px){
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .rounded-custom{
+    @media(max-width:992px){
+      width: 60%;
+    }
+    @media(max-width:576px){
+      width: 100%;
+    }
+
+    border-radius: 1rem!important;
+
+    .img-fluid{
+      height: 150px;
+      width: 150px;
+    }
+
+    .small{
+      font-size: 1em;
+    }
+  }
+}
+
+.btn-cyan{
+  background-color: #0088f4!important;
+  border-color: #0088f4!important;
+
+  color:white!important;
+}
+.btn-large{
+  @media(max-width:992px){
+    display: none!important;
+  }
+}
+.btn-small{
+  width: 60%;
+  margin-top: 30px;
+
+  @media(min-width:992px){
+    display: none!important;
+  }
+  @media(max-width:576px){
+    width: 100%;
+  }
+}

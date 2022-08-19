@@ -46,3 +46,6 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Replaced GetService<> with the new ServiceKit14
     * Updated webpack 
     * Changed the toolbar configurations to use the IToolbarService
+* v4.04.00 2022-08
+    * Added a new details view which can be used on its ow or as details view
+    * Added a app settings parameter which decides which details view should be used
