@@ -11,19 +11,21 @@
 
 @if(Person != null){
 
-  <div class="container-fluid" >
-    <div class="row">
+  <div class="container mb-4">
+    <div class="row justify-content-center">
       <div class="col-12 col-lg-7">
         <h1>
           @Person.Title
         </h1>
-        @Html.Raw(Person.Text)
-        <a class="btn btn-cyan rounded-pill btn-large" href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Person.UrlKey)' target="_blank">
+        <div class="mb-4">
+          @Html.Raw(Person.Text)
+        </div>
+        <a class="btn btn-outline-primary d-none d-lg-inline-block" href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Person.UrlKey)' target="_blank">
           Meine Daten zu deinen Kontakten hinzufügen
         </a>
       </div>
-      <div class="col-12 col-lg-3 offset-lg-1 card-wrapper" @personToolbar>
-        <div class="shadow rounded-custom bg-white p-3 d-flex flex-column alging-items-center text-center">
+      <div class="col-12 col-md-6 col-lg-4 offset-lg-1 card-wrapper" @personToolbar>
+        <div class="shadow rounded bg-white p-3 d-flex flex-column alging-items-center text-center mb-4 mb-lg-0">
           <div class="mb-1">
             @Kit.Image.Picture(Person.Image, settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid rounded-circle")
           </div>
@@ -33,25 +35,17 @@
           <p class="small">
             @Person.Function
           </p>
-          <p>
-            <span class="small">
-              @Person.Street
-            </span>
+          <p class="small">
+            @Person.Street
             <br>
-            <span class="small">
-              @Person.ZipCode @Person.City
-            </span>
-            ,
-            <span class="small">
-              @Person.Country
-            </span>
+            @Person.ZipCode @Person.City<span>@if(Text.Has(Person.Country)) {<span>, @Person.Country</span>}</span>
           </p>
           <p class="small">
-            <a class="fw-bold mb-1" href="tel:+41 81 750 67 70">
+            <a class="mb-1" href="tel:+41 81 750 67 70">
               Telefon @Person.Phone
             </a>
             <br>
-            <a class="fw-bold" href="mailto:@Person.EMail">
+            <a href="mailto:@Person.EMail">
               @Person.EMail
             </a>
           </p>
@@ -79,7 +73,7 @@
           </p>
         </div>
 
-        <a class="btn btn-cyan rounded-pill btn-small" href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Person.UrlKey)' target="_blank">
+        <a class="btn btn-outline-primary d-block d-lg-none" href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Person.UrlKey)' target="_blank">
           Meine Daten zu deinen Kontakten hinzufügen
         </a>
 
