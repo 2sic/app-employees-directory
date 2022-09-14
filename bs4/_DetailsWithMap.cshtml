@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
       @if(Text.Has(Content.Image)) {
-        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image")
+        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAlt: Content.FullName)
       } else {
         <div class="bg-primary img-placeholder"></div>
       }

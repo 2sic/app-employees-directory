@@ -14,7 +14,7 @@
           <div class="row h-100 g-0 align-items-center">
             <div class="col-3">
               @if(Text.Has(employee.Image)) {
-                @Kit.Image.Picture(employee.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid ms-2 ms-sm-0")
+                @Kit.Image.Picture(employee.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid ms-2 ms-sm-0", imgAlt: employee.FullName)
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }
