@@ -1,10 +1,7 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-
+@* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  // Activate turnOn in the page - see https://r.2sxc.org/turnon
-  Kit.Page.Activate("turnOn");
-
   var mapSettings = Settings.GoogleMaps;
 
   // They Google API key is in the App-Settings. See instructions: https://azing.org/2sxc/r/ippFQYkz
@@ -26,6 +23,5 @@
 }
 
 @* Instruct turnOn to activate GoogleMaps with the API key and everything once everything is loaded - uses turnOn https://r.2sxc.org/turnon *@
-<turnOn turn-on='{ "run": "window.appPeopleDirectory4.activeGoogleMaps()", "data": @Html.Raw(Kit.Json.ToJson(data)) }'></turnOn>
+@Kit.Page.TurnOn("window.appPeopleDirectory4.activeGoogleMaps()", data: data)
 
-@* 1 zu 1 gleich *@

@@ -9,7 +9,7 @@ Employees Directory App for 2sxc / DNN
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v13.10
+| 2sxc                | ✅    | requires 2sxc v15.04
 | Dnn                 | ✅    | For v7, v8 and v9
 | Oqtane 2            | ✅    | Requires v2.02
 | No jQuery           | ✅    | 
@@ -31,21 +31,26 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 ## History
 
-* v4 2021-10
+* v.4 2021-10
     * Updated to standard v12
     * Tested / works on Oqtane
     * no more jQuery
     * vCard generation now in custom API controller
-* v4.01.03 2022-03
+* v.4.01.03 2022-03
     * enabled data-optimizations
-* v4.02.00 2022-04 
+* v.4.02.00 2022-04 
     * Changed all access to services to ToSic.Sxc.Services
     * Changed all image tags to use the IImageService and the picture feature
-* v4.03.00 2022-06 
+* v.4.03.00 2022-06 
     * Replaced all base classes with their 2sxc 14 equivalents 
     * Replaced GetService<> with the new ServiceKit14
     * Updated webpack 
     * Changed the toolbar configurations to use the IToolbarService
-* v4.04.00 2022-08
+* v.4.04.00 2022-08
     * Added a new details view which can be used on its ow or as details view
     * Added a app settings parameter which decides which details view should be used
+* v.04.05.00 2023-02
+    * Replaced turnOn Tag with `Kit.Page.TurnOn`
+     * Enhanced Kit.Image with `imgAltFallback`
+    * Removed _ from Filenames
+    <!-- * Code in one file the bs5, less duplicated code -->

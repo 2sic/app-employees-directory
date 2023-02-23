@@ -1,15 +1,14 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-
+@* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  Kit.Page.Activate("FontAwesome5");
-
   var Person = Content;
 
+  // Default Toolbar for Person
   var personToolbar = Kit.Toolbar.Default(Person);
 }
 
-@if(Person != null){
+@if (Person != null){
   <div class="container mb-4">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-7">
@@ -26,7 +25,7 @@
       <div class="col-12 col-md-6 col-lg-4 offset-lg-1 card-wrapper" @personToolbar>
         <div class="shadow rounded bg-white p-3 d-flex flex-column alging-items-center text-center mb-4 mb-lg-0">
           <div class="mb-1">
-            @Kit.Image.Picture(Person.Image, settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid rounded-circle", imgAlt: Person.Title)
+            @Kit.Image.Picture(Person.Image, settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid rounded-circle", imgAltFallback: Person.Title)
           </div>
           <strong>
             @Person.FullName
@@ -37,7 +36,7 @@
           <p class="small">
             @Person.Street
             <br>
-            @Person.ZipCode @Person.City<span>@if(Text.Has(Person.Country)) {<span>, @Person.Country</span>}</span>
+            @Person.ZipCode @Person.City<span>@if (Text.Has(Person.Country)) {<span>, @Person.Country</span>}</span>
           </p>
           <p class="small">
             <a class="mb-1" href='tel:@Person.Phone.Replace(" ", String.Empty)'>
@@ -49,22 +48,22 @@
             </a>
           </p>
           <p class="d-flex justify-content-around">
-            @if(Text.Has(Person.LinkedIn)){
+            @if (Text.Has(Person.LinkedIn)){
               <a href="@Person.LinkedIn" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             }
-            @if(Text.Has(Person.Facebook)){
+            @if (Text.Has(Person.Facebook)){
               <a href="@Person.Facebook" title="Facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             }
-            @if(Text.Has(Person.Twitter)){
+            @if (Text.Has(Person.Twitter)){
               <a href="@Person.Twitter" title="Twitter">
                 <i class="fab fa-twitter"></i>
               </a>
             }
-            @if(Text.Has(Person.Instagram)){
+            @if (Text.Has(Person.Instagram)){
               <a href="@Person.Instagram" title="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
@@ -86,6 +85,7 @@
   </h1>
 }
 
+@* Include FontAwesome5  *@
+@Kit.Page.Activate("FontAwesome5");
 @Html.Partial("./Assets.cshtml")
 
-@* 1 zu 1 gleich *@

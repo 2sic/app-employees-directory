@@ -1,13 +1,12 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
+@* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
   var mapSettings = Settings.GoogleMaps;
   var warn = Kit.Convert.ToBool(mapSettings.ShowApiKeyWarning, fallback: false);
 }
-@if(warn) {
+@if (warn) {
   <div class="alert alert-danger">
     @Html.Raw(Resources.GoogleMaps.WarningApiKeyForDemoOnly)
   </div>
 }
-
-@* 1 zu 1 gleich *@

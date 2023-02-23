@@ -1,16 +1,16 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-
+@* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
   var googleMapDomId = "app-peopledirectory4-google-map-js-" + @CmsContext.Module.Id;
-
+  // Default Toolbar wihtout Layout
   var contentToolbar = Kit.Toolbar.Default().Layout("-");
 }
 <div class="app-peopledirectory4-details" @contentToolbar.For(Content)>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
-      @if(Text.Has(Content.Image)) {
-        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAlt: Content.FullName)
+      @if (Text.Has(Content.Image)) {
+        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: Content.FullName)
       } else {
         <div class="bg-primary img-placeholder"></div>
       }
@@ -22,13 +22,13 @@
         @* Address *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if(Text.Has(Content.Street)) {
+            @if (Text.Has(Content.Street)) {
               @Content.Street<br/>
             }
-            @if(Text.Has(Content.ZipCode) || Text.Has(Content.City)) {
+            @if (Text.Has(Content.ZipCode) || Text.Has(Content.City)) {
               @(Content.ZipCode + " " + Content.City)<br/>
             }
-            @if(Text.Has(Content.Country)) {
+            @if (Text.Has(Content.Country)) {
               @Content.Country
             }
           </p>
@@ -36,10 +36,10 @@
         @* Contact Information *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if(Text.Has(Content.Phone)) {
+            @if (Text.Has(Content.Phone)) {
               @Content.Phone<br/>
             }
-            @if(Text.Has(Content.EMail)) {
+            @if (Text.Has(Content.EMail)) {
               <a href="mailto:@Content.EMail">@Content.EMail</a><br/>
             }
             <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Content.UrlKey)' target="_blank">vCard</a>
@@ -48,7 +48,7 @@
         <div class="col-12">@Html.Raw(Content.AdditionalNotes)</div>
       </div>
     </div>
-    @* Google Map *@
+    @* Google Maps *@
     <div class="col-md-12 col-lg-5 mt-3 mt-lg-0">
       <div class="app-peopledirectory4-js-google-map-container embed-responsive embed-responsive-16by9">
         <div class="embed-responsive-item ratio ratio-21x9" id="@googleMapDomId"></div>
@@ -61,4 +61,3 @@
 @Html.Partial("./Details.PartGoogleMaps.cshtml", new { DomId = googleMapDomId })
 @Html.Partial("./Assets.cshtml")
 
-@* 1 zu 1 gleich *@

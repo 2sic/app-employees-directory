@@ -1,15 +1,24 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
+@* --- This is the Bootstrap5 Edition of the Files --- *@
+@{
+  // query whether BS5 or BS4 for Class
+  var isBs5 = Kit.Css.Is("bs5");
+}
 
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
-    @foreach(var employee in AsList(Data)) {
+    @foreach (var employee in AsList(Data)) {
+    // Class for BS5 or BS4 
+    var marginLeft = isBs5 ? "ms-2 ms-sm-0" : "ml-2 ml-sm-0";
+    var noGutters = isBs5 ? "g-0" : "no-gutters";
+
       <div class="col mb-4" @Kit.Toolbar.Default(employee)>
         <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: "id=" + employee.UrlKey))'>
-          <div class="row h-100 g-0 align-items-center">
+          <div class="row h-100 @noGutters align-items-center">
             <div class="col-3">
-              @if(Text.Has(employee.Image)) {
-                @Kit.Image.Picture(employee.Field("Image"), Kit.Image.Settings("Employees"), imgClass:"img-fluid ms-2 ms-sm-0")
+              @if (Text.Has(employee.Image)) {
+                @Kit.Image.Picture(employee.Field("Image"), Kit.Image.Settings("Employees"), imgClass:"img-fluid @marginLeft", imgAltFallback:employee.FullName)
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }
@@ -28,8 +37,3 @@
 </div>
 
 @Html.Partial("./Assets.cshtml")
-
-@* Zeile 9: BS5 g-0 | BS4 no-gutters *@
-@* Zeile 12: BS5 ms | BS4 ml *@
-
-

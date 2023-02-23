@@ -1,4 +1,5 @@
 @inherits Custom.Hybrid.Razor14
+@* --- This is the Bootstrap5 Edition of the Files --- *@
 
 @* show warning for admin if koi.json is missing *@
 @if (Kit.Css.IsUnknown && CmsContext.User.IsSiteAdmin) {
@@ -8,7 +9,9 @@
   </div>
 }
 
-<link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" @Kit.Page.AssetAttributes()>
-<script src="@App.Path/bs5/dist/scripts.min.js" @Kit.Page.AssetAttributes()></script>
+@* 1. Include styles of the App *@
+<link rel="stylesheet" href="@CmsContext.View.Path/dist/styles.min.css" @Kit.Page.AssetAttributes()>
 
-@* 1 zu 1 gleich *@
+@* 2. Include scritps of the App *@
+<script src="@CmsContext.View.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes()></script>
+
