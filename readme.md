@@ -53,4 +53,4 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Replaced turnOn Tag with `Kit.Page.TurnOn`
      * Enhanced Kit.Image with `imgAltFallback`
     * Removed _ from Filenames
-    <!-- * Code in one file the bs5, less duplicated code -->
+    * Code in one file the bs5, less duplicated code

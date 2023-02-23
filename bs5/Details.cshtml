@@ -8,7 +8,7 @@
   var personToolbar = Kit.Toolbar.Default(Person);
 }
 
-@if (Person != null){
+@if (Person != null) {
   <div class="container mb-4">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-7">
@@ -48,22 +48,22 @@
             </a>
           </p>
           <p class="d-flex justify-content-around">
-            @if (Text.Has(Person.LinkedIn)){
+            @if (Text.Has(Person.LinkedIn)) {
               <a href="@Person.LinkedIn" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             }
-            @if (Text.Has(Person.Facebook)){
+            @if (Text.Has(Person.Facebook)) {
               <a href="@Person.Facebook" title="Facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             }
-            @if (Text.Has(Person.Twitter)){
+            @if (Text.Has(Person.Twitter)) {
               <a href="@Person.Twitter" title="Twitter">
                 <i class="fab fa-twitter"></i>
               </a>
             }
-            @if (Text.Has(Person.Instagram)){
+            @if (Text.Has(Person.Instagram)) {
               <a href="@Person.Instagram" title="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
