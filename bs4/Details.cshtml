@@ -41,7 +41,7 @@
             @Person.ZipCode @Person.City<span>@if(Text.Has(Person.Country)) {<span>, @Person.Country</span>}</span>
           </p>
           <p class="small">
-            <a class="mb-1" href='tel:@Person.Phone.Replace(" ", String.Empty)'>
+             <a class="mb-1" href='tel:@Person.Phone.Replace(" ", String.Empty)'>
               Telefon @Person.Phone
             </a>
             <br>
@@ -87,4 +87,4 @@
   </h1>
 }
 
-@Html.Partial("./_Assets.cshtml")
+@Html.Partial("./Assets.cshtml")
