@@ -14,7 +14,7 @@
   <div class="row row-cols-1 row-cols-lg-2">
     @foreach ( var employee in AsList(Data) ) {
       var urlParamters = Settings.DetailsView == true ? "person=" : "id=";
-      // Class for BS5 or BS4 
+      // Class for BS5 or BS4 ms = margin start, ml = margin left
       var marginLeft = isBs5 ? "ms-2 ms-sm-0" : "ml-2 ml-sm-0";
       var noGutters = isBs5 ? "g-0" : "no-gutters";  
 
@@ -42,6 +42,3 @@
 </div>
 
 @Html.Partial("./Assets.cshtml")
-
-@* Zeile 17: BS5 ms | BS4 ml *@
-

@@ -39,7 +39,7 @@ public class VCardController : Custom.Hybrid.Api14
         CountryName = person.Country,
         Phone = person.Phone,
         PhoneCompany = Settings.CompanyPhone,
-        // Mobile = person.,// queryString["mobile"],
+        Mobile = person.Mobile,// queryString["mobile"],
         Email = person.EMail,
         Url = Settings.CompanyUrl,
     };

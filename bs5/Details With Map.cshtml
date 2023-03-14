@@ -52,12 +52,12 @@
     <div class="col-md-12 col-lg-5 mt-3 mt-lg-0">
       <div class="app-peopledirectory4-js-google-map-container embed-responsive embed-responsive-16by9">
         <div class="embed-responsive-item ratio ratio-21x9" id="@googleMapDomId"></div>
-        @Html.Partial("Details.PartGoogleMapsWarning.cshtml")
+        @Html.Partial("Content.Part GoogleMaps Warning.cshtml")
       </div>
     </div>
   </div>
 </div>
 
-@Html.Partial("./Details.PartGoogleMaps.cshtml", new { DomId = googleMapDomId })
+@Html.Partial("./Content.Part GoogleMaps.cshtml", new { DomId = googleMapDomId })
 @Html.Partial("./Assets.cshtml")
 
