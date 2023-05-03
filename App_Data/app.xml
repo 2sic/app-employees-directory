@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="14.09.00" ExportDate="2022-09-21T08:44:09.6442987+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.00.00" ExportDate="2023-05-03T15:18:53.9282147+02:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -9,10 +9,25 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
-      <Attributes />
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Scope="System.App" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="NoPerson" Type="String" IsTitle="true">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="bf831d01-5203-4cd2-81b9-1c471538fb01" Json="True" KeyNumber="5551">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="NoPerson" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="AddContact" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a9f3b3df-4456-47fb-a9d6-1cfa3333f240" Json="True" KeyNumber="5552">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="AddContact" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="DetailsView" Type="Boolean" IsTitle="false">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="20a9a0ad-0542-44be-af9c-2b92b4ca6471" Json="True" KeyNumber="5463">
@@ -302,7 +317,7 @@
             </Value>
           </Entity>
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="e08078d3-42e1-4f36-9e73-ec17d2c4cd6a" Json="True" KeyNumber="4271">
-            <Value Key="RowCount" Value="5" Type="Number">
+            <Value Key="RowCount" Value="5.0" Type="Number">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
@@ -357,7 +372,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Person" Description="Content-Type to display Employee." Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" Name="Person" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Basic" Type="Empty" IsTitle="false">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f220fec5-ae95-4567-b40f-7c877d82ca6c" Json="True" KeyNumber="5447">
@@ -448,7 +463,7 @@
             <Value Key="InputType" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
@@ -499,7 +514,7 @@
             <Value Key="InputType" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
@@ -554,7 +569,7 @@
             <Value Key="InputType" Value="" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
@@ -741,7 +756,7 @@
             <Value Key="InputType" Value="wysiwyg" Type="String">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="63" ReadOnly="false" />
             </Value>
           </Entity>
@@ -1106,6 +1121,13 @@
             </Value>
           </Entity>
         </Attribute>
+        <Attribute StaticName="Mobile" Type="String" IsTitle="false">
+          <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="eb40d21d-5706-403f-a099-236aba17fba9" Json="True" KeyNumber="5553">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Mobile" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
         <Attribute StaticName="EMail" Type="String" IsTitle="false">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="54f85b40-dd8e-4b22-9573-afef972ed3ed" Json="True" KeyNumber="1476">
             <Value Key="CustomJavaScript" Value="" Type="String">
@@ -1306,13 +1328,13 @@
       <Value Key="RequiredOqtaneVersion" Value="03.01.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="14.09.00" Type="String">
+      <Value Key="RequiredVersion" Value="15.04.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="04.04.02" Type="String">
+      <Value Key="Version" Value="04.05" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1336,7 +1358,20 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="0a4e5126-3ea4-4662-9a9b-539578ebaf14" KeyNumber="76" />
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="0a4e5126-3ea4-4662-9a9b-539578ebaf14" KeyNumber="76">
+      <Value Key="AddContact" Value="Add my information to your contacts" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="AddContact" Value="Meine Daten zu deinen Kontakten hinzufügen" Type="String">
+        <Dimension DimensionID="64" ReadOnly="false" />
+      </Value>
+      <Value Key="NoPerson" Value="There is no employee selected. Please select one from the list." Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="NoPerson" Value="Es ist kein Mitarbeiter ausgewählt. Bitte wählen Sie eine aus der Liste unten aus." Type="String">
+        <Dimension DimensionID="64" ReadOnly="false" />
+      </Value>
+    </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="a7abc3ba-59df-40c5-a7dd-13be92507701" AttributeSetName="Person" EntityGUID="ce6ba7a3-a590-4952-bca0-f7d6caac1d68">
       <Value Key="AdditionalNotes" Value="&lt;p&gt;Need help getting started? Take a look at &lt;a href=&quot;https://azing.org/2sxc/r/2Qsd-qum&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this checklist&lt;/a&gt;.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
@@ -1384,6 +1419,9 @@
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="LinkedIn" Value="https://www.linkedin.com/" Type="Hyperlink">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
+      <Value Key="Mobile" Value="+41 00 000 00 01" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Phone" Value="+41 00 000 00 00" Type="String">
@@ -1538,12 +1576,13 @@
       <Value Key="Name" Value="All Employees" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs4/_AllEmployees.cshtml" Type="String">
+      <Value Key="Name" Value="Alle Mitarbeiter" Type="String">
+        <Dimension DimensionID="64" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs5/AllEmployees.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Pipeline" Value="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Type="Entity">
-        <Dimension DimensionID="63" ReadOnly="false" />
-      </Value>
+      <Value Key="Pipeline" Value="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Type="Entity" />
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1597,7 +1636,7 @@
       <Value Key="Name" Value="Details by Id with Map" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs4/_DetailsWithMap.cshtml" Type="String">
+      <Value Key="Path" Value="bs5/Details With Map.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Pipeline" Value="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7" Type="Entity" />
@@ -1655,7 +1694,10 @@
       <Value Key="Name" Value="Selected Employees" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs4/_SelectedEmployees.cshtml" Type="String">
+      <Value Key="Name" Value="Mitarbeiter Verzeichnis" Type="String">
+        <Dimension DimensionID="64" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs5/SelectedEmployees.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
@@ -1802,7 +1844,7 @@
       <Value Key="Advanced" Value="{&#xD;&#xA;  &quot;recipe&quot;:{&#xD;&#xA;    &quot;setHeight&quot;: true, &#xD;&#xA;    &quot;setWidth&quot;: true,&#xD;&#xA;    &quot;variants&quot;:&quot;2*, 1.5*, 1*, 0.75*, 0.5*&quot;&#xD;&#xA;  }&#xD;&#xA;}" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="AspectRatio" Value="1" Type="Number">
+      <Value Key="AspectRatio" Value="1.0" Type="Number">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Format" Value="" Type="String">
@@ -1811,7 +1853,7 @@
       <Value Key="ItemIdentifier" Value="Employees" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Quality" Value="90" Type="Number">
+      <Value Key="Quality" Value="90.0" Type="Number">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="ResizeMode" Value="crop" Type="String">
@@ -1823,7 +1865,7 @@
       <Value Key="SettingsIdentifier" Value="Images.Employees" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Width" Value="200" Type="Number">
+      <Value Key="Width" Value="200.0" Type="Number">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1907,7 +1949,10 @@
       <Value Key="Name" Value="Details by Person" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs5/_Details.cshtml" Type="String">
+      <Value Key="Name" Value="Details nach Person" Type="String">
+        <Dimension DimensionID="64" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs5/Details.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Pipeline" Value="6b5c9ad9-9a64-42f3-86f8-a51335b0afe7" Type="Entity" />
@@ -2021,7 +2066,10 @@
       <Value Key="Name" Value="Details by Settings" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs5/_Details.cshtml" Type="String">
+      <Value Key="Name" Value="Details nach Settings" Type="String">
+        <Dimension DimensionID="64" ReadOnly="false" />
+      </Value>
+      <Value Key="Path" Value="bs5/Details.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
