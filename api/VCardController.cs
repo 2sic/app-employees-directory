@@ -139,8 +139,7 @@ public class VCardController : Custom.Hybrid.Api14
 
       // Add image
       if(Text.Has(PhotoBase64)) {
-        builder.AppendLine("PHOTO;ENCODING=BASE64;TYPE=JPEG:");
-        builder.AppendLine(PhotoBase64);
+        builder.AppendLine("PHOTO;ENCODING=BASE64;TYPE=JPEG:" + PhotoBase64);
         builder.AppendLine(string.Empty);
       }
 
