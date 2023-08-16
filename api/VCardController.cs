@@ -17,39 +17,36 @@ using System.Net.Http;
 using System.Text;
 using ToSic.Razor.Blade;
 
-public class VCardController : Custom.Hybrid.Api14
+public class VCardController : Custom.Hybrid.ApiTyped
 {
   [HttpGet]
   [AllowAnonymous]
-  public dynamic Get([FromQuery] string id)
+  public object Get([FromQuery] string id)
   {
-    var personEntity = App.Query["PersonUrlKey"].List.FirstOrDefault();
-    if (personEntity == null) throw new Exception("Can't find person with id " + id);
-    var person = AsDynamic(personEntity);
+    var person = AsItem(App.Query["PersonUrlKey"]);
+    if (person == null) throw new Exception("Can't find person with id " + id);
 
     var card = new VCard
     {
-        FirstName = person.FirstName,
-        LastName = person.LastName,
-        Organization = Settings.CompanyName,
-        JobTitle = person.Function,
-        StreetAddress = person.Street,
-        Zip = person.ZipCode,
-        City = person.City,
-        CountryName = person.Country,
-        Phone = person.Phone,
-        PhoneCompany = Settings.CompanyPhone,
-        Mobile = person.Mobile,// queryString["mobile"],
-        Email = person.EMail,
-        Url = Settings.CompanyUrl,
+        FirstName = person.String("FirstName"),
+        LastName = person.String("LastName"),
+        Organization = App.Settings.String("CompanyName"),
+        JobTitle = person.String("Function"),
+        StreetAddress = person.String("Street"),
+        Zip = person.String("ZipCode"),
+        City = person.String("City"),
+        CountryName = person.String("Country"),
+        Phone = person.String("Phone"),
+        PhoneCompany = App.Settings.String("CompanyPhone"),
+        Mobile = person.String("Mobile"),
+        Email = person.String("EMail"),
+        Url = App.Settings.Url("CompanyUrl"),
     };
 
-    if (Text.Has(person.Image)) {
-      var photoPath = Link.Image(person.Image, width: 250, height: 250, quality: 80, format: "jpg", type: "full");
+    if (Text.Has(person.String("Image"))) {
+      var photoPath = Link.Image(person.Url("Image"), width: 250, height: 250, quality: 80, format: "jpg", type: "full");
       card.PhotoBase64 = CreateThumbnail(photoPath);
     }
-
-    var mimeType = "text/vcard";
 
     var fileName = card.FirstName + " " + card.LastName;
     if (string.IsNullOrWhiteSpace(fileName))
@@ -65,7 +62,7 @@ public class VCardController : Custom.Hybrid.Api14
     var cardBytes = inputEncoding.GetBytes(cardString);
     var outputBytes = Encoding.Convert(inputEncoding, outputEncoding, cardBytes);
 
-    return File(download: true, contents: outputBytes, contentType: mimeType, fileDownloadName: Path.GetFileName(fileName));
+    return File(download: true, contents: outputBytes, contentType: "text/vcard", fileDownloadName: Path.GetFileName(fileName));
   }
 
 

@@ -1,51 +1,54 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorTyped
 @using ToSic.Razor.Blade;
 @* --- This is the Bootstrap5 Edition of the Files --- *@
+
 @{
-  var googleMapDomId = "app-peopledirectory4-google-map-js-" + @CmsContext.Module.Id;
+  var person = MyItem;
+  var googleMapDomId = "app-peopledirectory4-google-map-js-" + MyContext.Module.Id;
   // Default Toolbar wihtout Layout
   var contentToolbar = Kit.Toolbar.Default().Layout("-");
 }
-<div class="app-peopledirectory4-details" @contentToolbar.For(Content)>
+
+<div class="app-peopledirectory4-details" @contentToolbar.For(person)>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
-      @if (Text.Has(Content.Image)) {
-        @Kit.Image.Picture(Content.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: Content.FullName)
+      @if (Text.Has(person.String("Image"))) {
+        @Kit.Image.Picture(person.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: person.String("FullName"))
       } else {
         <div class="bg-primary img-placeholder"></div>
       }
     </div>
     <div class="col-12 col-md-9 col-lg-5 col-xl-5">
-      <h2>@Content.FullName</h2>
-      <p>@Content.Function</p>
+      <h2>@person.String("FullName")</h2>
+      <p>@person.String("Function")</p>
       <div class="row">
         @* Address *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if (Text.Has(Content.Street)) {
-              @Content.Street<br/>
+            @if (Text.Has(person.String("Street"))) {
+             @person.String("Street")<br/>
             }
-            @if (Text.Has(Content.ZipCode) || Text.Has(Content.City)) {
-              @(Content.ZipCode + " " + Content.City)<br/>
+            @if (Text.Has(person.String("ZipCode")) || Text.Has(person.String("City"))) {
+              @(person.String("ZipCode") + " " + person.String("City"))<br/>
             }
-            @if (Text.Has(Content.Country)) {
-              @Content.Country
+            @if (Text.Has(person.String("Country"))) {
+              @person.String("Country")
             }
           </p>
         </div>
         @* Contact Information *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if (Text.Has(Content.Phone)) {
-              @Content.Phone<br/>
+            @if (Text.Has(person.String("Phone"))) {
+              @person.String("Phone")<br/>
             }
-            @if (Text.Has(Content.EMail)) {
-              <a href="mailto:@Content.EMail">@Content.EMail</a><br/>
+            @if (Text.Has(person.String("EMail"))) {
+              <a href="mailto:@person.String("EMail")">@person.String("EMail")</a><br/>
             }
-            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + Content.UrlKey)' target="_blank">vCard</a>
+            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + person.String("UrlKey"))' target="_blank">vCard</a>
           </p>
         </div>
-        <div class="col-12">@Html.Raw(Content.AdditionalNotes)</div>
+        @person.Html("AdditionalNotes").Class("col-12")
       </div>
     </div>
     @* Google Maps *@
@@ -58,6 +61,6 @@
   </div>
 </div>
 
-@Html.Partial("./Content.Part GoogleMaps.cshtml", new { DomId = googleMapDomId })
+@Html.Partial("./Content.Part GoogleMaps.cshtml", new { domId = googleMapDomId })
 @Html.Partial("./Assets.cshtml")
 
