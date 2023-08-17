@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
       @if (Text.Has(person.String("Image"))) {
-        @Kit.Image.Picture(person.Field("Image"), settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: person.String("FullName"))
+        @person.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: person.String("FullName"))
       } else {
         <div class="bg-primary img-placeholder"></div>
       }
