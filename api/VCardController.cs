@@ -23,7 +23,7 @@ public class VCardController : Custom.Hybrid.ApiTyped
   [AllowAnonymous]
   public object Get([FromQuery] string id)
   {
-    var person = AsItem(App.Query["PersonUrlKey"]);
+    var person = AsItem(App.GetQuery("PersonUrlKey"));
     if (person == null) throw new Exception("Can't find person with id " + id);
 
     var card = new VCard
