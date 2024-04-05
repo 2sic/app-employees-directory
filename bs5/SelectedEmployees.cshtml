@@ -1,5 +1,6 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
   // query whether BS5 or BS4 for Class
@@ -8,25 +9,25 @@
 
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
-    @foreach (var employee in AsItems(MyData)) {
+    @foreach (var employee in AsList<Person>(MyData)) {
     // Class for BS5 or BS4 
     var marginLeft = isBs5 ? "ms-2 ms-sm-0" : "ml-2 ml-sm-0";
     var noGutters = isBs5 ? "g-0" : "no-gutters";
 
       <div class="col mb-4" @Kit.Toolbar.Default(employee)>
-        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: "id=" + employee.String("UrlKey")))'>
+        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: "id=" + employee.UrlKey))'>
           <div class="row h-100 @noGutters align-items-center">
             <div class="col-3">
-              @if (Text.Has(employee.String("Image"))) {
-                @employee.Picture("Image", settings: "Employees", imgClass:"img-fluid @marginLeft", imgAltFallback: employee.String("FullName"))
+              @if (employee.IsNotEmpty("Image")) {
+                @employee.Picture("Image", settings: "Employees", imgClass:"img-fluid @marginLeft", imgAltFallback: employee.FullName)
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }
             </div>
             <div class="col">
               <div class="card-body">
-                <h3 class="card-title mb-1">@employee.String("FullName")</h3>
-                <p class="card-text text-dark">@employee.String("Function")</p>
+                <h3 class="card-title mb-1">@employee.FullName</h3>
+                <p class="card-text text-dark">@employee.Function</p>
               </div>
             </div>
           </div>

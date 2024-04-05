@@ -1,9 +1,10 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 
 @{
-  var person = MyItem;
+  var person = As<Person>(MyItem);
   var googleMapDomId = "app-peopledirectory4-google-map-js-" + UniqueKey;
   // Default Toolbar wihtout Layout
   var contentToolbar = Kit.Toolbar.Default().Layout("-");
@@ -12,40 +13,40 @@
 <div class="app-peopledirectory4-details" @contentToolbar.For(person)>
   <div class="row">
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
-      @if (Text.Has(person.String("Image"))) {
-        @person.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: person.String("FullName"))
+      @if (person.IsNotEmpty("Image")) {
+        @person.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: person.FullName)
       } else {
         <div class="bg-primary img-placeholder"></div>
       }
     </div>
     <div class="col-12 col-md-9 col-lg-5 col-xl-5">
-      <h2>@person.String("FullName")</h2>
-      <p>@person.String("Function")</p>
+      <h2>@person.FullName</h2>
+      <p>@person.Function</p>
       <div class="row">
         @* Address *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if (Text.Has(person.String("Street"))) {
-             @person.String("Street")<br/>
+            @if (person.IsNotEmpty("Street")) {
+             @person.Street<br/>
             }
-            @if (Text.Has(person.String("ZipCode")) || Text.Has(person.String("City"))) {
-              @(person.String("ZipCode") + " " + person.String("City"))<br/>
+            @if (person.IsNotEmpty("ZipCode") || person.IsNotEmpty("City")) {
+              @(person.ZipCode + " " + person.City)<br/>
             }
-            @if (Text.Has(person.String("Country"))) {
-              @person.String("Country")
+            @if (person.IsNotEmpty("Country")) {
+              @person.Country
             }
           </p>
         </div>
         @* Contact Information *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if (Text.Has(person.String("Phone"))) {
-              @person.String("Phone")<br/>
+            @if (person.IsNotEmpty("Phone")) {
+              @person.Phone<br/>
             }
-            @if (Text.Has(person.String("EMail"))) {
-              <a href="mailto:@person.String("EMail")">@person.String("EMail")</a><br/>
+            @if (person.IsNotEmpty("EMail")) {
+              <a href="mailto:@person.EMail">@person.EMail</a><br/>
             }
-            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + person.String("UrlKey"))' target="_blank">vCard</a>
+            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + person.UrlKey)' target="_blank">vCard</a>
           </p>
         </div>
         @person.Html("AdditionalNotes").Class("col-12")
