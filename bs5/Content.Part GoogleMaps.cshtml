@@ -7,7 +7,10 @@
   // The Preset-data is encrypted, so we must decrypt it to use
   var googleApikey = Kit.SecureData.Parse(AllSettings.Url("GoogleMaps.ApiKey")).Value;
 
+  @* TODO: @2DG - BETTER CAST to the right type, and then just use .Gps, .Title, .DomId etc. *@
+
   var gps = MyItem.Gps("GPS");
+  
 
   var data = new {
     apiKey = googleApikey,

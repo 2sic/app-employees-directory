@@ -4,53 +4,60 @@
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 
 @{
-  // Get one Person
-  var pers = As<Person>(MyItem);
+  // Get Person and prepare id for the google-maps
+  var person = As<Person>(MyItem);
   var googleMapDomId = "app-peopledirectory4-google-map-js-" + UniqueKey;
 }
 
-<div class="app-peopledirectory4-details" @Kit.Toolbar.Default().Layout("-").For(pers)> 
+<div class="app-peopledirectory4-details" @Kit.Toolbar.Default().Layout("-").For(person)> 
   <div class="row">
+
+    @* Image *@
     <div class="col-12 col-md-3 col-lg-2 col-xl-2">
-      @if (pers.IsNotEmpty("Image")) {
-        @pers.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: pers.FullName)
+      @if (person.IsNotEmpty("Image")) {
+        @person.Picture("Image", settings: "Employees", imgClass:"img-fluid mb-3 mb-md-0 emp-image", imgAltFallback: person.FullName)
       } else {
         <div class="bg-primary img-placeholder"></div>
       }
     </div>
+
+    @* Address and details *@
     <div class="col-12 col-md-9 col-lg-5 col-xl-5">
-      <h2>@pers.FullName</h2>
-      <p>@pers.Function</p>
+      <h2>@person.FullName</h2>
+      <p>@person.Function</p>
+
       <div class="row">
         @* Address *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if (pers.IsNotEmpty("Street")) {
-             @pers.Street<br/>
+            @if (person.IsNotEmpty("Street")) {
+             @person.Street<br/>
             }
-            @if (pers.IsNotEmpty("ZipCode") || pers.IsNotEmpty("City")) {
-              @(pers.ZipCode + " " + pers.City)<br/>
+            @if (person.IsNotEmpty("ZipCode") || person.IsNotEmpty("City")) {
+              @(person.ZipCode + " " + person.City)<br/>
             }
-            @if (pers.IsNotEmpty("Country")) {
-              @pers.Country
+            @if (person.IsNotEmpty("Country")) {
+              @person.Country
             }
           </p>
         </div>
+
         @* Contact Information *@
         <div class="col-12 col-md-6 col-lg-12">
           <p>
-            @if (pers.IsNotEmpty("Phone")) {
-              @pers.Phone<br/>
+            @if (person.IsNotEmpty("Phone")) {
+              @person.Phone<br/>
             }
-            @if (pers.IsNotEmpty("EMail")) {
-              <a href="mailto:@pers.EMail">@pers.EMail</a><br/>
+            @if (person.IsNotEmpty("EMail")) {
+              <a href="mailto:@person.EMail">@person.EMail</a><br/>
             }
-            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + pers.UrlKey)' target="_blank">vCard</a>
+            <a href='@Link.To(api: "api/VCard/Get", parameters: "id=" + person.UrlKey)' target="_blank">vCard</a>
           </p>
         </div>
-        @pers.Html("AdditionalNotes").Class("col-12")
+        @person.Html("AdditionalNotes").Class("col-12")
       </div>
     </div>
+
     @* Google Maps *@
     <div class="col-md-12 col-lg-5 mt-3 mt-lg-0">
       <div class="app-peopledirectory4-js-google-map-container embed-responsive embed-responsive-16by9">
@@ -58,6 +65,7 @@
         @Html.Partial("Content.Part GoogleMaps Warning.cshtml")
       </div>
     </div>
+
   </div>
 </div>
 
