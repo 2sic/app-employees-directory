@@ -4,35 +4,32 @@
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 
 @{
- // Default Toolbar for each employee without Delete
-  var employeeToolbar = Kit.Toolbar.Default().Delete();
-
   // query whether BS5 or BS4 for Class
   var isBs5 = Kit.Css.Is("bs5");
 }
 
 <div class="app-peopledirectory4-wrapper">
   <div class="row row-cols-1 row-cols-lg-2">
-    @foreach ( var employee in AsList<Person>(MyData) ) {
+    @foreach ( var pers in AsList<Person>(MyData) ) {
       var urlParamters = App.Settings.DetailsView == true ? "person=" : "id=";
       // Class for BS5 or BS4 ms = margin start, ml = margin left
       var marginLeft = isBs5 ? "ms-2 ms-sm-0" : "ml-2 ml-sm-0";
       var noGutters = isBs5 ? "g-0" : "no-gutters";  
 
-      <div class="col mb-4" @employeeToolbar.For(employee)>
-        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: @urlParamters + employee.UrlKey))'>
+      <div class="col mb-4" @Kit.Toolbar.Default().Delete().For(pers)>
+        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: @urlParamters + pers.UrlKey))'>
           <div class="row h-100 @noGutters align-items-center">
             <div class="col-3">
-              @if (employee.IsNotEmpty("Image")) {
-                @employee.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid @marginLeft", imgAltFallback: employee.FullName)
+              @if (pers.IsNotEmpty("Image")) {
+                @pers.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid @marginLeft", imgAltFallback: pers.FullName)
               } else {
                 <div class="bg-primary img-placeholder"></div>
               }
             </div>
             <div class="col">
               <div class="card-body">
-                <h3 class="card-title mb-1">@employee.FullName</h3>
-                <p class="card-text text-dark">@employee.Function</p>
+                <h3 class="card-title mb-1">@pers.FullName</h3>
+                <p class="card-text text-dark">@pers.Function</p>
               </div>
             </div>
           </div>
