@@ -1,27 +1,25 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  var mapSettings = AllSettings.Child("GoogleMaps");
-  var config = MyItem;
-
   // They Google API key is in the App-Settings. See instructions: https://azing.org/2sxc/r/ippFQYkz
   // The Preset-data is encrypted, so we must decrypt it to use
-  var googleApikey = Kit.SecureData.Parse(mapSettings.String("ApiKey")).Value;
+  var googleApikey = Kit.SecureData.Parse(AllSettings.Url("GoogleMaps.ApiKey")).Value;
 
-  // GPS is a JSON field, so we must use ToTyped to easily access the properties
-  var gps = Kit.Json.ToTyped(MyItem.String("GPS"));
-
+  var gps = MyItem.Gps("GPS");
+  
   var data = new {
     apiKey = googleApikey,
     domId = MyModel.String("DomId"),
-    icon = Text.First(mapSettings.Url("Icon"), ""),
-    lat = gps.Double("Latitude"),
-    lng = gps.Double("Longitude"), 
-    zoom = mapSettings.Int("Zoom", fallback: 14), 
+    icon = Text.First(AllSettings.Url("GoogleMaps.Icon"), ""),
+    lat = gps.Latitude, 
+    lng = gps.Longitude,  
+    zoom = AllSettings.Int("GoogleMaps.Zoom" , fallback: 14), 
     info = MyItem.String("Title")
   };
 }
+
 
 @* Instruct turnOn to activate GoogleMaps with the API key and everything once everything is loaded - uses turnOn https://r.2sxc.org/turnon *@
 @Kit.Page.TurnOn("window.appPeopleDirectory4.activeGoogleMaps()", data: data)

@@ -24,6 +24,9 @@
 // @import "_variables.scss";
 @import "../../node_modules/bs5/scss/mixins/_breakpoints.scss";
 @import "../../node_modules/bs5/scss/variables";
+@import "../../node_modules/bs5/scss/_mixins";
+@import "../../node_modules/bs5/scss/_card";
+
 
 // Now parse the PeopleDirectory CSS Rules
 @import "_style.scss";

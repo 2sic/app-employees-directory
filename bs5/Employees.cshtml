@@ -1,0 +1,46 @@
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
+@* --- This is the Bootstrap5 Edition of the Files --- *@
+
+@{
+  // use for Navigate to the DetailsView with Person Info (Person) or with ID (Details with Map)
+  var urlParamters = App.Settings.DetailsView == true ? "person=" : "id=";
+  // if View on Selected Employees, use id for the url Id parameter else (AllEmployees) us urlParameters  
+  urlParamters = MyView.Name == "Selected Employees" ? "id=" : urlParamters;
+
+}
+
+<div class="app-peopledirectory4-wrapper">
+  <div class="row row-cols-1 row-cols-lg-2">
+    @foreach (var person in AsList<Person>(MyData))
+    {
+      @{
+          // Class for BS5 or BS4
+          var marginLeft = Kit.Css.Is("bs5") ? "ms-2 ms-sm-0" : "ml-2 ml-sm-0";
+          var noGutters = Kit.Css.Is("bs5") ? "g-0" : "no-gutters";  
+        }
+      <div class="col mb-4" @Kit.Toolbar.Default().Delete().For(person)>
+        <a class="card bg-light h-100 text-decoration-none" href='@Link.Image(Link.To(parameters: @urlParamters + person.UrlKey))'>
+          <div class="row h-100 @noGutters align-items-center">
+            <div class="col-3">
+              @if (person.IsNotEmpty("Image")) {
+                @person.Picture("Image", settings: Kit.Image.Settings("Employees"), imgClass:"img-fluid @marginLeft", imgAltFallback: person.FullName)
+              } else {
+                <div class="bg-primary img-placeholder"></div>
+              }
+            </div>
+            <div class="col">
+              <div class="card-body">
+                <h3 class="card-title mb-1">@person.FullName</h3>
+                <p class="card-text text-dark">@person.Function</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    }
+  </div>
+</div>
+
+@Html.Partial("./Assets.cshtml")
