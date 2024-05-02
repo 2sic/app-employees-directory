@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-26T09:45:40.7877872+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="17.07.00" ExportDate="2024-05-02T11:18:41.9207915+02:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -1304,6 +1304,9 @@
       <Value Key="AllowTokenTemplates" Value="False" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
+      <Value Key="DebugLog" Value="" Type="String">
+        <Dimension DimensionID="63" ReadOnly="false" />
+      </Value>
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
@@ -1325,16 +1328,16 @@
       <Value Key="RequiredDnnVersion" Value="09.06.01" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="04.00.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="05.00.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
+      <Value Key="RequiredVersion" Value="17.07.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="04.06.00" Type="String">
+      <Value Key="Version" Value="04.17.00" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1582,7 +1585,7 @@
       <Value Key="Name" Value="Alle Mitarbeiter" Type="String">
         <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs5/AllEmployees.cshtml" Type="String">
+      <Value Key="Path" Value="bs5/Employees.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="Pipeline" Value="4372b3f1-d4f5-4941-beac-1ebdbff6486c" Type="Entity" />
@@ -1700,7 +1703,7 @@
       <Value Key="Name" Value="Mitarbeiter Verzeichnis" Type="String">
         <Dimension DimensionID="64" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs5/SelectedEmployees.cshtml" Type="String">
+      <Value Key="Path" Value="bs5/Employees.cshtml" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
