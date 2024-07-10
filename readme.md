@@ -60,4 +60,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Strong Typed
   * Auto Generated Class
   * Typed MyItem
-  
+* v04.17.01 2024-07
+  * minor bugfix incorrect razor which only worked in DNN
