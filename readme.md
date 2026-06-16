@@ -64,3 +64,7 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * minor bugfix incorrect razor which only worked in DNN
 * v04.17.02 2024-07
   * Update app.sln and app.csproj
+* v04.21.00 2026-03
+  * Added intellisense Extensions for Visual Studio Code
+* v04.21.01 2026-06
+  * Switched from webpack to Vite for faster builds
