@@ -18,8 +18,8 @@ Employees Directory App for 2sxc / DNN
 | App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/people-directory-v4-hybrid-for-dnn-and-oqtane)
 | Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/people-directory-v4-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v13.10 conventions
-| Bootstrap 3         | ✔️    | Works but not optimized
-| Bootstrap 4         | ✅    |
+| Bootstrap 3         | ❌    | Last supported in v04.21.01
+| Bootstrap 4         | ❌    | Last supported in v04.21.01
 | Bootstrap 5         | ✅    |
 
 ## Customize the App
@@ -29,6 +29,10 @@ This App uses Google-Maps, and you will need to use your own (free) Maps API key
 If you want to customize the CSS, you will usually follow the ["Create Custom Styles in a Standard 2sxc App" checklist](https://azing.org/2sxc/r/gg_aB9FD)
 
 ## History
+
+* v04.21.02 2026-10
+  * Removed Bootstrap 3 and Bootstrap 4 support; the app is now Bootstrap 5 only
+  * For Bootstrap 3 or Bootstrap 4, use v04.21.01
 
 * v.4 2021-10
   * Updated to standard v12
