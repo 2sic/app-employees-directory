@@ -1,15 +1,14 @@
-import { Loader } from '@googlemaps/js-api-loader';
+import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import { GoogleMapsOptions } from './lib-2sxc-google-maps-options';
 
 const debug = false;
 
-export function activeGoogleMaps({apiKey, domId, icon, zoom, lat, lng, info } : GoogleMapsOptions) {
+export async function activeGoogleMaps({apiKey, domId, icon, zoom, lat, lng, info } : GoogleMapsOptions) {
   if(debug) console.log('build map', arguments);
 
-  const loader = new Loader({
-    apiKey: apiKey,
-    version: "weekly",
-    libraries: ["places"]
+  setOptions({
+    key: apiKey,
+    v: "weekly",
   });
 
   const mapOptions = {
@@ -22,33 +21,33 @@ export function activeGoogleMaps({apiKey, domId, icon, zoom, lat, lng, info } : 
     zoomControl: true,
     scaleControl: true,
     scrollwheel: false,
-    mapTypeId: 'roadmap'
+    mapTypeId: 'roadmap',
+    mapId: domId
   };
 
-  loader.load().then((google) => {
-    var map = new google.maps.Map(document.getElementById(domId), mapOptions);
+  const { Map } = await importLibrary('maps');
+  const { AdvancedMarkerElement } = await importLibrary('marker');
 
-    var marker = new google.maps.Marker({
-      position: {
-        lat: lat,
-        lng: lng
-      },
-      map: map,
-      icon: icon
-    });
+  const map = new Map(document.getElementById(domId), mapOptions);
 
-    if (info && info !== '') {
-      // Create InfoWindow
-      var infoWindow = new google.maps.InfoWindow({
-          content: info
-      });
+  const markerContent = icon ? Object.assign(document.createElement('img'), { src: icon }) : undefined;
 
-      // Add Event listener
-      google.maps.event.addListener(marker, 'click', function () {
-          infoWindow.open(map, marker);
-      });
-    }
-
-    if(debug) console.log('map loaded');
+  const marker = new AdvancedMarkerElement({
+    position: {
+      lat: lat,
+      lng: lng
+    },
+    map: map,
+    ...(markerContent && { content: markerContent })
   });
+
+  if (info && info !== '') {
+    const { InfoWindow } = await importLibrary('maps');
+    const infoWindow = new InfoWindow({ content: info });
+    marker.addListener('gmp-click', () => {
+      infoWindow.open({ anchor: marker, map });
+    });
+  }
+
+  if(debug) console.log('map loaded');
 }

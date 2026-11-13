@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="21.08.00" ExportDate="2026-06-16T09:00:27.6555102+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="22.01.00" ExportDate="2026-11-13T14:18:13.7219346+01:00">
   <Header>
     <App Guid="86a00f3c-80a8-4df1-a639-e78919c70000" />
     <Language Default="en-us" />
@@ -1325,10 +1325,10 @@
       <Value Key="OriginalId" Value="" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredDnnVersion" Value="09.06.01" Type="String">
+      <Value Key="RequiredDnnVersion" Value="9.11.2" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="05.00.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="10.0.0" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
       <Value Key="RequiredVersion" Value="21.05.00" Type="String">
@@ -1337,7 +1337,7 @@
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="04.21.02" Type="String">
+      <Value Key="Version" Value="04.21.03" Type="String">
         <Dimension DimensionID="63" ReadOnly="false" />
       </Value>
     </Entity>
@@ -2121,8 +2121,8 @@
     </Entity>
   </Entities>
   <PortalFiles>
-    <File Id="4554" RelativePath="adam\EmployeesDirectory3\o6drzpClUkm8oPfWyqwdaA\Image\placeholder_q.jpg" />
-    <File Id="4555" RelativePath="adam\EmployeesDirectory3\5tTPMzpWLEODNyWx_oyPVQ\Image\Daniel Mettler Profile MVP.png" />
+    <File Id="4554" RelativePath="adam/EmployeesDirectory3/o6drzpClUkm8oPfWyqwdaA/Image/placeholder_q.jpg" />
+    <File Id="4555" RelativePath="adam/EmployeesDirectory3/5tTPMzpWLEODNyWx_oyPVQ/Image/Daniel Mettler Profile MVP.png" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="10176" RelativePath="adam/EmployeesDirectory3/o6drzpClUkm8oPfWyqwdaA/Image/" />

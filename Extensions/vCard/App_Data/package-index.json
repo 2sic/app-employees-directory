@@ -1,0 +1,50 @@
+{
+  "comments": "This file contains the list of files in a package with their hashes to check if files were changed.",
+  "version": "01.00.00",
+  "files": [
+    {
+      "file": "/Extensions/vCard/icon.png",
+      "hash": "ec532ac5a0dd4847475d2b079cc0726c37f0ab16d981577b30ee94fd435a5234"
+    },
+    {
+      "file": "/Extensions/vCard/license.txt",
+      "hash": "0060900bb420658a63acd30a76d54572946663e3e7aa772c525f8b7d195bc091"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCard.cs",
+      "hash": "8008bedf8b179285b22c2e492b383119dd1aaab1911b06c97f2eb200e5524f8a"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCardFile.cs",
+      "hash": "0603ada1576c64a06b44ea4c8d7a53f5b4cb6dafbe62c65c588d8f2e9bac3c82"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCardService.cs",
+      "hash": "1bb43738911bcc6e5d39b1088e6a8d5d96e4c31787f9c0e5af0358799416a0b7"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCardStringExtensions.cs",
+      "hash": "41a4ffdddb6730361e4ef51672c0eeaaba51dc445ef091c8a5d3c6d7756ad9d2"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCard.cs",
+      "hash": "8008bedf8b179285b22c2e492b383119dd1aaab1911b06c97f2eb200e5524f8a"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCardFile.cs",
+      "hash": "0603ada1576c64a06b44ea4c8d7a53f5b4cb6dafbe62c65c588d8f2e9bac3c82"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCardService.cs",
+      "hash": "1bb43738911bcc6e5d39b1088e6a8d5d96e4c31787f9c0e5af0358799416a0b7"
+    },
+    {
+      "file": "/AppCode/Extensions/VCard/VCardStringExtensions.cs",
+      "hash": "41a4ffdddb6730361e4ef51672c0eeaaba51dc445ef091c8a5d3c6d7756ad9d2"
+    },
+    {
+      "file": "/Extensions/vCard/App_Data/extension.json",
+      "hash": "80a8efec2fc9e48a3536632884488f615a381ea7db3fe1bdaebbc49937b9e90f"
+    }
+  ]
+}
